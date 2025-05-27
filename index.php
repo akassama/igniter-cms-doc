@@ -285,8 +285,9 @@
                             <h3>Requirements</h3>
                             <ul>
                                 <li>PHP (recommended version: 8.0 or higher)</li>
+                                <li>Enable `zip` and `gd` extension in php ini</li>
                                 <li>Composer installed.</li>
-                                <li>MySQL or another supported database</li>
+                                <li>MySQL, Postgre, SQLite or another supported database</li>
                                 <li>Web server (Apache, Nginx, etc.)</li>
                             </ul>
                         </section>
@@ -295,9 +296,11 @@
                             <ol>
                                 <li>Clone or download the project from the repository (<a href="https://github.com/akassama/codeigniter-starter-app">GitHub</a>).</li>
                                 <li>Navigate to the project folder and run <code>composer install</code> to install dependencies.</li>
-                                <li>Set the database config in <code>app/Config/Database.php</code>. Use the <code>.env</code> file to configure environment settings.</li>
+                                <li>Set the database config in <code>app/Config/Database.php</code>. Also use the <code>.env</code> file to configure environment and database settings.</li>
+                                <li>Set the base URL in <code>app/Config/App.php</code>.</li>
+								<li>Make sure you create the database in your local server.</li>
                                 <li>Run database migrations with <code>php spark migrate</code>.</li>
-                                <li>Start the development server with <code>php spark serve</code>.</li>
+                                <li>Open the base url in browser. E.g. <code>http://localhost:8080/igniter-cms/</code>.</li>
                             </ol>
                             <p>
                                 Note: To reset database you can use these commands <code>php spark delete:tables</code> and <code>php spark migrate</code>
