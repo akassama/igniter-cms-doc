@@ -299,6 +299,7 @@
                                 <li>Set the database config in <code>app/Config/Database.php</code>. Also use the <code>.env</code> file to configure environment and database settings.</li>
                                 <li>Set the base URL in <code>app/Config/App.php</code>.</li>
 								<li>Make sure you create the database in your local server.</li>
+                                <li>Generate App Key: <code>php spark generate:key</code>. This command will generate/update the application key (APP_KEY) in .env file.</li>
                                 <li>Run database migrations with <code>php spark migrate</code>.</li>
                                 <li>Open the base url in browser. E.g. <code>http://localhost:8080/igniter-cms/</code>.</li>
                             </ol>
