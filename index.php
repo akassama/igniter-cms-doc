@@ -189,6 +189,7 @@
                                     <li><a href="#homepage">Home Page</a></li>
                                     <li><a href="#contentblocks">Content Blocks</a></li>
                                     <li><a href="#events">Events</a></li>
+                                    <li><a href="#gallery">Gallery</a></li>
                                     <li><a href="#portfolios">Portfolios</a></li>
                                     <li><a href="#services">Services</a></li>
                                     <li><a href="#partners">Partners</a></li>
@@ -198,8 +199,10 @@
                                     <li><a href="#teams">Teams</a></li>
                                     <li><a href="#testimonials">Testimonials</a></li>
                                     <li><a href="#faqs">FAQs</a></li>
-                                    <li><a href="#donation-causes">Donation Causes</a></li>
+                                    <li><a href="#appointments">Appointments</a></li>
+                                    <li><a href="#donation-causes">Donations</a></li>
                                     <li><a href="#popups">Popups</a></li>
+                                    <li><a href="#data-groups">Data Groups</a></li>
                                 </ul>
                             </li>
                             <li><a href="#ecommerce">Ecommerce </a>
@@ -232,11 +235,22 @@
                                     <li><a href="#themes">Themes</a></li>
                                     <li><a href="#api-keys">API Keys</a></li>
                                     <li><a href="#activity-logs">Activity Logs</a></li>
+                                    <li><a href="#logs">Logs</a></li>
                                     <li><a href="#visit-stats">Visit Stats</a></li>
+                                    <li><a href="#blocked-ips">Blocked IP's</a></li>
+                                    <li><a href="#whitelisted-ips">Whitelisted IP's</a></li>
                                     <li><a href="#backups">Backups</a></li>
                                     <li><a href="#file-editor">File Editor</a></li>
                                     <li><a href="#contact-messages">Contact Messages</a></li>
+                                    <li><a href="#bookings">Bookings</a></li>
                                     <li><a href="#subscribers">Subscribers</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#ai-assistance">AI Assistance<small>(pro)</small> </a>
+                                <ul class="nav">
+                                    <li><a href="#ask-ai">Ask AI</a></li>
+                                    <li><a href="#ai-text-generation">AI Text Generation</a></li>
+                                    <li><a href="#ai-analysis">AI Data Analysis & Analytics</a></li>
                                 </ul>
                             </li>
                             <li><a href="#for-developers">For Developers</a>
@@ -493,6 +507,24 @@
                                 <li>Status toggles (e.g., Published or Draft).</li>
                             </ul>
                         </section>
+
+                        <section id="gallery">
+                            <h3>Gallery</h3>
+                            <p>Manage site galleries with categorized images. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-gallery.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-gallery.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Form for gallery details, including title, group, image, and caption.</li>
+                                <li>You can use these images for gallery display in the theme.</li>
+                                <li>Status toggles (e.g., Published or Draft).</li>
+                            </ul>
+                        </section>
                         
                         <section id="services">
                             <h3>Services</h3>
@@ -628,9 +660,28 @@
                                 <li>Provide questions, answers, and display order.</li>
                             </ul>
                         </section>
+
+                        <section id="appointments">
+                            <h3>Appointments</h3>
+                            <p>Manage customer appointments with scheduling and tracking options. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-appointments.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-appointments.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Calendar integration with calendly.</li>
+                                <li>Appointment scheduling form with time slots with calendly.</li>
+                                <li>Automated email confirmations.</li>
+                                <li>Status updates (e.g., Confirmed, Pending, Completed).</li>
+                            </ul>
+                        </section>
                         
                         <section id="donation-causes">
-                            <h3>Donation Causes</h3>
+                            <h3>Donations</h3>
                             <p>Manage donation causes. Features include:</p>
                             <div class="row">
                                 <div class="col-12">
@@ -645,6 +696,25 @@
                                 <li>Slug generation from the title.</li>
                                 <li>Image selection and embedded page code support.</li>
                                 <li>Status toggles (e.g., Published or Draft).</li>
+                            </ul>
+                        </section>
+
+                        <section id="data-groups">
+                            <h3>Data Groups</h3>
+                            <p>Organize and manage structured data entries for various purposes. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-data-groups.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-data-groups.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Form for data group details.</li>
+                                <li>Structured data categorization.</li>
+                                <li>Export options for analytics.</li>
+                                <li>Fetching filters (e.g., for different themes).</li>
                             </ul>
                         </section>
                         
@@ -861,6 +931,7 @@
 														<li>- Content Blocks</li>
 														<li>- Events</li>
 														<li>- Portfolios</li>
+                                                        <li>- Gallery</li>
 														<li>- Services</li>
 														<li>- Partners</li>
 														<li>- Counters</li>
@@ -869,7 +940,8 @@
 														<li>- Teams</li>
 														<li>- Testimonials</li>
 														<li>- FAQs</li>
-														<li>- Donations</li>
+														<li>- DataGroups</li>
+                                                        <li>- DataGroups</li>
 														<li>- Popups</li>
 													</ul>
 												</td>
@@ -934,6 +1006,7 @@
 														<li>- Backups</li>
 														<li>- File Editor</li>
 														<li>- Contact Messages</li>
+                                                        <li>- Bookings</li>
 														<li>- Subscribers</li>
 													</ul>
 												</td>
@@ -946,7 +1019,7 @@
 												<td><i class="ri-check-line text-success"></i></td>
 											</tr>
 											<tr>
-												<td>AI Chatbot</td>
+												<td>AI Assistance</td>
 												<td><i class="ri-check-line text-success"></i></td>
 												<td><i class="ri-check-line text-success"></i></td>
 											</tr>
@@ -1027,6 +1100,24 @@
                                 </div>
                             </div>
                         </section>
+
+                        <section id="logs">
+                            <h3>Logs</h3>
+                            <p>Track system events and actions with detailed logs. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-logs.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-logs.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Detailed logs for system events.</li>
+                                <li>Export functionality.</li>
+                                <li>Error tracking.</li>
+                            </ul>
+                        </section>
                     
                         <section id="visit-stats">
                             <h3>Visit Stats</h3>
@@ -1038,6 +1129,41 @@
                                     </a>
                                 </div>
                             </div>
+                        </section>
+
+                        <section id="blocked-ips">
+                            <h3>Blocked IPs</h3>
+                            <p>Manage and restrict access from unwanted IP addresses. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-blocked-ips.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-blocked-ips.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Form for adding blocked IP addresses.</li>
+                                <li>Manual or automated blocking.</li>
+                                <li>Search and removal options.</li>
+                            </ul>
+                        </section>
+
+                        <section id="whitelisted-ips">
+                            <h3>Whitelisted IPs</h3>
+                            <p>Allow specific IP addresses for privileged access. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-whitelisted-ips.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-whitelisted-ips.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Form for adding whitelisted IP addresses.</li>
+                                <li>Search and removal options.</li>
+                            </ul>
                         </section>
                     
                         <section id="backups">
@@ -1074,6 +1200,23 @@
                                     </a>
                                 </div>
                             </div>
+                        </section>
+
+                        <section id="bookings">
+                            <h3>Bookings</h3>
+                            <p>Manage reservations for various services. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cms-bookings.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cms-bookings.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Booking request form.</li>
+                                <li>Status tracking (e.g., Pending, Confirmed, Canceled).</li>
+                            </ul>
                         </section>
                     
                         <section id="subscribers">
@@ -1305,8 +1448,20 @@
                                         <td>App\Models\AnnouncementPopupsModel</td>
                                     </tr>
                                     <tr>
+                                        <td>appointmentsModel</td>
+                                        <td>App\Models\AppointmentsModel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>blockedIPsModel</td>
+                                        <td>App\Models\BlockedIPsModel</td>
+                                    </tr>
+                                    <tr>
                                         <td>blogs</td>
                                         <td>App\Models\BlogsModel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bookingsModel</td>
+                                        <td>App\Models\BookingsModel</td>
                                     </tr>
                                     <tr>
                                         <td>categories</td>
@@ -1329,6 +1484,10 @@
                                         <td>App\Models\CountersModel</td>
                                     </tr>
                                     <tr>
+                                        <td>dataGroupsModel</td>
+                                        <td>App\Models\DataGroupsModel</td>
+                                    </tr>
+                                    <tr>
                                         <td>donationCauses</td>
                                         <td>App\Models\DonationCausesModel</td>
                                     </tr>
@@ -1339,6 +1498,10 @@
                                     <tr>
                                         <td>faqs</td>
                                         <td>App\Models\FrequentlyAskedQuestionsModel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>galleryModel</td>
+                                        <td>App\Models\GalleryModel</td>
                                     </tr>
                                     <tr>
                                         <td>homePage</td>
@@ -1408,6 +1571,10 @@
                                         <td>translations</td>
                                         <td>App\Models\TranslationsModel</td>
                                     </tr>
+                                    <tr>
+                                        <td>whitelistedIPsModel</td>
+                                        <td>App\Models\WhitelistedIPsModel</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </section>
@@ -1434,6 +1601,17 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td style="padding: 8px;">AppointmentsModel</td>
+                                        <td style="padding: 8px;">
+                                            <code>
+                                                appointment_id(VARCHAR), title(VARCHAR), description(VARCHAR), image(VARCHAR), slug(VARCHAR),
+                                                appointment_type(VARCHAR), embed_url(VARCHAR), embed_script(TEXT), widget_height(VARCHAR),
+                                                widget_min_width(VARCHAR), status(INT), total_views(INT), meta_title(VARCHAR),
+                                                meta_description(VARCHAR), meta_keywords(VARCHAR), created_by(VARCHAR), updated_by(VARCHAR)
+                                            </code>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td style="padding: 8px;">AnnouncementPopupsModel</td>
                                         <td style="padding: 8px;">
                                             <code>
@@ -1450,12 +1628,31 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td style="padding: 8px;">BookingsModel</td>
+                                        <td style="padding: 8px;">
+                                            <code>
+                                                booking_id(VARCHAR), name(VARCHAR), email(VARCHAR), phone(VARCHAR), booking_date(DATE),
+                                                booking_time(TIME), no_of_people(INT), message(VARCHAR), other(VARCHAR), ip_address(VARCHAR),
+                                                country(VARCHAR), device(VARCHAR), created_by(VARCHAR), updated_by(VARCHAR)
+                                            </code>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td style="padding: 8px;">BlogsModel</td>
                                         <td style="padding: 8px;">
                                             <code>
                                                 blog_id(VARCHAR), title(VARCHAR), slug(VARCHAR), featured_image(VARCHAR), excerpt(VARCHAR), 
                                             content(TEXT), category(VARCHAR), tags(VARCHAR), is_featured(BOOLEAN), status(INT), meta_title(VARCHAR), 
                                             meta_description(TEXT), meta_keywords(TEXT), created_by(DATETIME), updated_by(DATETIME)
+                                            </code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px;">BlockedIPsModel</td>
+                                        <td style="padding: 8px;">
+                                            <code>
+                                                blocked_ip_id(VARCHAR), ip_address(VARCHAR), country(VARCHAR), block_start_time(DATETIME),
+                                                block_end_time(DATETIME), reason(VARCHAR), notes(VARCHAR), page_visited_url(VARCHAR)
                                             </code>
                                         </td>
                                     </tr>
@@ -1506,6 +1703,15 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td style="padding: 8px;">DataGroupsModel</td>
+                                        <td style="padding: 8px;">
+                                            <code>
+                                                data_group_id(VARCHAR), data_group_for(VARCHAR), data_group_list(VARCHAR),
+                                                deletable(VARCHAR), created_by(VARCHAR), updated_by(VARCHAR)
+                                            </code>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td style="padding: 8px;">DonationCausesModel</td>
                                         <td style="padding: 8px;">
                                             <code>
@@ -1533,6 +1739,15 @@
                                                 faq_id(VARCHAR), question(VARCHAR), answer(VARCHAR), order(INT), created_by(DATETIME), updated_by(DATETIME)
                                             </code>
                                         </td>
+                                      </tr>
+                                      <tr>
+                                          <td style="padding: 8px;">GalleryModel</td>
+                                          <td style="padding: 8px;">
+                                            <code>
+                                                gallery_id(VARCHAR), title(VARCHAR), caption(VARCHAR), category_filter(VARCHAR),
+                                                group(VARCHAR), image(VARCHAR), status(INT), created_by(VARCHAR), updated_by(VARCHAR)
+                                            </code>
+                                          </td>
                                       </tr>
                                       <tr>
                                         <td style="padding: 8px;">LanguagesModel</td>
@@ -1686,6 +1901,14 @@
                                             </code>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td style="padding: 8px;">WhitelistedIPsModel</td>
+                                        <td style="padding: 8px;">
+                                            <code>
+                                                whitelisted_ip_id(VARCHAR), ip_address(VARCHAR), reason(VARCHAR)
+                                            </code>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                             
@@ -1698,30 +1921,13 @@
                                 <pre class="brush: php; highlight: [2,4]">class CustomConfig extends BaseConfig
 {
         #--------------------------------------------------------------------
-        # SETTINGS
-        #--------------------------------------------------------------------
-        public $useCaptcha = "No";
-        public $appApiKey = "default";
-        public $frontEndFormat = "MVC"; //MVC/API
-
-        #--------------------------------------------------------------------
-        # DATABASE
-        #--------------------------------------------------------------------
-        public $hostname = 'localhost';
-        public $database = 'ci_starter_db';
-        public $username = 'root';
-        public $password = '';
-        public $DBDriver = 'MySQLi';
-        public $DBPrefix = '';
-        public $port = '3306';
-
-        #--------------------------------------------------------------------
         # MESSAGES
         #--------------------------------------------------------------------
         public $wrongCredentialsMsg = 'Sign In Failed. The provided username/email or password is incorrect.';
         public $loginSuccessMsg = 'Login successful.';
         public $logoutSuccessMsg = 'You have been successfully logged out.';
         public $pendingActivationMsg = 'Your account has not been activated yet or is no longer active. Please contact the administrator.';
+        public $tooManyFailedLogins = 'Too many failed login attempts. Your IP has been blocked for 1 hour.';
         public $invalidAccessMsg = 'You do not have access to this area.';
         public $createSuccessMsg = 'Record created successfully.';
         public $editSuccessMsg = 'Record updated successfully.';
@@ -1734,22 +1940,44 @@
         public $errorMsg = 'Oops! Something went wrong. Please try again later.';
         public $resetLinkMsg = 'A password reset link has been sent to your email address. Please check your inbox and follow the instructions to reset your password. If you do not see the email in your inbox, please check your spam or junk folder.';
         public $invalidResetLinkMsg = 'Invalid or expired password reset link.';
+        public $passwordResetRequiredMsg = 'For security reasons, you need to change your password before continuing. Your current password was either set by an administrator or is a default password.';
         public $passwordResetSuccessfulMsg = 'Your password has been reset successfully. You can now log in with your new password.';
         public $passwordResetFailedMsg = 'Unable to reset password. Please try again';
         public $nonExistingResetEmailMsg = 'We are sorry, but the email address you entered is not associated with any account. Please check the email address and try again.';
         public $exceptionMsg = 'There was an error processing your request. Please try again. If this error persists, please see or send an email to system administrator.';
         public $contactMessageSuccessful = 'Your message has been sent successfully.';
         public $contactMessageFailed = 'Oops! Something went wrong with your message submission. Please try again later.';
+        public $bookingSuccessful = 'Your booking has been made successfully.';
+        public $bookingFailed = 'Oops! Something went wrong with your booking submission. Please try again later.';
         public $subscriptionSuccessful = 'You have successfully subscribed!';
         public $subscriptionFailed = 'Sorry, something went wrong with your subscription. Please try again.';
 
+        #--------------------------------------------------------------------
+        # THEME CATEGORIES
+        #--------------------------------------------------------------------
+        public $themeCategories = [
+            'Business' => 'Business & Corporate',
+            'Ecommerce' => 'Ecommerce',
+            'Portfolio' => 'Portfolio & Resume',
+            'News' => 'Blog & News',
+            'Events' => 'Event & Booking Websites',
+            'Educational' => 'Educational & Membership Websites',
+            'Restaurant' => 'Restaurant & Hospitality Websites',
+            'Health' => 'Health & Wellness Websites',
+            'Directory' => 'Directory & Listing Websites',
+            'Entertainment' => 'Entertainment Websites',
+            'General' => 'General',
+        ];
+
 
         #--------------------------------------------------------------------
-        # COMPANY
+        # USER ROLES
         #--------------------------------------------------------------------
-        public $companyName = 'CI-Starter App';
-        public $companyEmail = 'ci-starter@mail.com';
-        public $companyAddress = '123 Maple Street<br/> Watford, Hertfordshire<br/> WD17 1AA<br/> United Kingdom';
+        public $userRoles = [
+            'Admin' => 'Admin',
+            'Manager' => 'Manager',
+            'User' => 'User',
+        ];
     }
                                     </pre>
                                 </div>
@@ -1828,6 +2056,72 @@
                             <p>Customize the files by going to <code>app/Views/front-end/themes/{theme-folder}</code>.</p>
                         </section>
                     </section>
+                    <!-- end section -->
+                    <section id="ai-assistance">
+                        <h2>AI Assistance</h2>
+                        <p>Enhance productivity and streamline workflows with AI-powered features tailored for Igniter CMS.</p>
+
+                        <section id="ask-ai">
+                            <h3>Ask AI</h3>
+                            <p>Get instant AI-powered assistance for any questions related to <a href="https://ignitercms.com">Igniter CMS</a>. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/ask-ai.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/ask-ai.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>AI-powered responses for troubleshooting and best practices.</li>
+                                <li>Instant answers for common CMS-related queries.</li>
+                                <li>Guidance on module usage and integrations.</li>
+                                <li>Recommendations for optimizing CMS performance.</li>
+                                <li>Interactive search for documentation and support topics.</li>
+                            </ul>
+                        </section>
+
+                        <section id="ai-text-generation">
+                            <h3>AI Text Generation</h3>
+                            <p>Generate content dynamically to improve site efficiency and SEO ranking. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/ai-text-generation.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/ai-text-generation.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Generate CMS titles based on best practices.</li>
+                                <li>Automate description generation for pages and posts.</li>
+                                <li>Create dynamic SEO metadata to improve search visibility.</li>
+                                <li>Suggest relevant tags for categorization.</li>
+                                <li>Enhance user engagement with AI-crafted summaries.</li>
+                            </ul>
+                        </section>
+
+                        <section id="ai-analysis">
+                            <h3>AI Analysis</h3>
+                            <p>Leverage AI to gain insights into site performance and operational data. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/ai-analysis.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/ai-analysis.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Analyze site statistics for visitor trends.</li>
+                                <li>Review and interpret error logs for debugging.</li>
+                                <li>Track file logs for audit trails and security monitoring.</li>
+                                <li>Evaluate activity logs to monitor user engagement.</li>
+                                <li>Provide actionable insights for site optimization.</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <br>
                     <!-- end section -->
 
                     <section id="copyright-license" class="section">
