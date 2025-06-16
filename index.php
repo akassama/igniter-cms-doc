@@ -1242,7 +1242,7 @@
                                 <li><strong>Home Page</strong></li>
                                 <li><code>/api/{api-key}/get-home-page</code>: Retrieves the main homepage content and layout configuration.</li>
                             </ul>
-                            
+
                             <ul>
                                 <li><strong>Generic Model Data</strong></li>
                                 <li><code>/api/{api-key}/get-model-data?model=navigations&take=10&skip=0</code>: Generic - Fetch navigations (10 items, skip 0).</li>
@@ -1252,12 +1252,26 @@
                             </ul>
 
                             <ul>
+                                <li><strong>Appointments</strong></li>
+                                <li><code>/api/{api-key}/get-all-appointments</code>: Returns a complete list of all scheduled appointments.</li>
+                                <li><code>/api/{api-key}/get-appointment/{appointment_id}</code>: Fetches details for a specific appointment, including time, status, and user details.</li>
+                                <li><code>/api/{api-key}/get-appointments?take=10&skip=0</code>: Retrieves paginated appointments with customizable limit and offset parameters.</li>
+                            </ul>
+
+                            <ul>
                                 <li><strong>Blogs</strong></li>
                                 <li><code>/api/{api-key}/get-all-blogs</code>: Returns a complete list of all published blog posts.</li>
                                 <li><code>/api/{api-key}/get-blog/{blog_id}</code>: Fetches a specific blog post with detailed content, metadata, and related information.</li>
                                 <li><code>/api/{api-key}/get-blogs?take=10&skip=0</code>: Retrieves paginated blog posts with customizable limit and offset parameters.</li>
                             </ul>
-                            
+
+                            <ul>
+                                <li><strong>Bookings</strong></li>
+                                <li><code>/api/{api-key}/get-all-bookings</code>: Returns a complete list of all bookings.</li>
+                                <li><code>/api/{api-key}/get-booking/{booking_id}</code>: Fetches details for a specific booking, including associated user and status.</li>
+                                <li><code>/api/{api-key}/get-bookings?take=10&skip=0</code>: Retrieves paginated bookings with limit and offset options.</li>
+                            </ul>
+
                             <ul>
                                 <li><strong>Categories</strong></li>
                                 <li><code>/api/{api-key}/get-category/{category_id}</code>: Retrieves detailed information about a specific content category.</li>
@@ -1292,7 +1306,14 @@
                                 <li><code>/api/{api-key}/get-counters</code>: Returns all available counters and statistics.</li>
                                 <li><code>/api/{api-key}/get-counters?take=10&skip=0</code>: Retrieves filtered counters with pagination.</li>
                             </ul>
-                            
+
+                            <ul>
+                                <li><strong>Data Groups</strong></li>
+                                <li><code>/api/{api-key}/get-all-data-groups</code>: Returns a complete list of all data groups.</li>
+                                <li><code>/api/{api-key}/get-data-group/{group_id}</code>: Fetches details for a specific data group, including metadata and associated entries.</li>
+                                <li><code>/api/{api-key}/get-data-groups?take=10&skip=0</code>: Retrieves paginated data groups with filtering options.</li>
+                            </ul>
+
                             <ul>
                                 <li><strong>Donation Causes</strong></li>
                                 <li><code>/api/{api-key}/get-donation-cause/{donation_cause_id}</code>: Fetches detailed information about a specific donation cause.</li>
@@ -1313,7 +1334,14 @@
                                 <li><code>/api/{api-key}/get-faqs</code>: Gets all published FAQs.</li>
                                 <li><code>/api/{api-key}/get-faqs?take=10&skip=0</code>: Returns a filtered list of FAQs with pagination.</li>
                             </ul>
-                            
+
+                            <ul>
+                                <li><strong>Gallery</strong></li>
+                                <li><code>/api/{api-key}/get-all-gallery-images</code>: Returns a complete list of all gallery images.</li>
+                                <li><code>/api/{api-key}/get-gallery-image/{image_id}</code>: Fetches details for a specific image, including metadata and category.</li>
+                                <li><code>/api/{api-key}/get-gallery-images?take=10&skip=0</code>: Retrieves paginated gallery images with customizable limit and offset parameters.</li>
+                            </ul>
+
                             <ul>
                                 <li><strong>Languages</strong></li>
                                 <li><code>/api/{api-key}/get-language/{language_id}</code>: Fetches information about a specific language.</li>
