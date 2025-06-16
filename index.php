@@ -1231,7 +1231,73 @@
                             </div>
                         </section>
                     </section>
-                    
+
+
+                    <!-- end section -->
+                    <section id="ai-assistance">
+                        <h2>AI Assistance</h2>
+                        <p>Enhance productivity and streamline workflows with AI-powered features tailored for Igniter CMS.</p>
+
+                        <section id="ask-ai">
+                            <h3>Ask AI</h3>
+                            <p>Get instant AI-powered assistance for any questions related to <a href="https://ignitercms.com">Igniter CMS</a>. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/ask-ai.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/ask-ai.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>AI-powered responses for troubleshooting and best practices.</li>
+                                <li>Instant answers for common CMS-related queries.</li>
+                                <li>Guidance on module usage and integrations.</li>
+                                <li>Recommendations for optimizing CMS performance.</li>
+                                <li>Interactive search for documentation and support topics.</li>
+                            </ul>
+                        </section>
+
+                        <section id="ai-text-generation">
+                            <h3>AI Text Generation</h3>
+                            <p>Generate content dynamically to improve site efficiency and SEO ranking. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/ai-text-generation.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/ai-text-generation.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Generate CMS titles based on best practices.</li>
+                                <li>Automate description generation for pages and posts.</li>
+                                <li>Create dynamic SEO metadata to improve search visibility.</li>
+                                <li>Suggest relevant tags for categorization.</li>
+                                <li>Enhance user engagement with AI-crafted summaries.</li>
+                            </ul>
+                        </section>
+
+                        <section id="ai-analysis">
+                            <h3>AI Analysis</h3>
+                            <p>Leverage AI to gain insights into site performance and operational data. Features include:</p>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/ai-analysis.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/ai-analysis.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Analyze site statistics for visitor trends.</li>
+                                <li>Review and interpret error logs for debugging.</li>
+                                <li>Track file logs for audit trails and security monitoring.</li>
+                                <li>Evaluate activity logs to monitor user engagement.</li>
+                                <li>Provide actionable insights for site optimization.</li>
+                            </ul>
+                        </section>
+                    </section>
                     
                     <section id="for-developers">
                         <h2>For Developers</h2>
@@ -2084,72 +2150,6 @@
                             <p>Customize the files by going to <code>app/Views/front-end/themes/{theme-folder}</code>.</p>
                         </section>
                     </section>
-                    <!-- end section -->
-                    <section id="ai-assistance">
-                        <h2>AI Assistance</h2>
-                        <p>Enhance productivity and streamline workflows with AI-powered features tailored for Igniter CMS.</p>
-
-                        <section id="ask-ai">
-                            <h3>Ask AI</h3>
-                            <p>Get instant AI-powered assistance for any questions related to <a href="https://ignitercms.com">Igniter CMS</a>. Features include:</p>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/ask-ai.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/ask-ai.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>AI-powered responses for troubleshooting and best practices.</li>
-                                <li>Instant answers for common CMS-related queries.</li>
-                                <li>Guidance on module usage and integrations.</li>
-                                <li>Recommendations for optimizing CMS performance.</li>
-                                <li>Interactive search for documentation and support topics.</li>
-                            </ul>
-                        </section>
-
-                        <section id="ai-text-generation">
-                            <h3>AI Text Generation</h3>
-                            <p>Generate content dynamically to improve site efficiency and SEO ranking. Features include:</p>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/ai-text-generation.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/ai-text-generation.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Generate CMS titles based on best practices.</li>
-                                <li>Automate description generation for pages and posts.</li>
-                                <li>Create dynamic SEO metadata to improve search visibility.</li>
-                                <li>Suggest relevant tags for categorization.</li>
-                                <li>Enhance user engagement with AI-crafted summaries.</li>
-                            </ul>
-                        </section>
-
-                        <section id="ai-analysis">
-                            <h3>AI Analysis</h3>
-                            <p>Leverage AI to gain insights into site performance and operational data. Features include:</p>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/ai-analysis.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/ai-analysis.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Analyze site statistics for visitor trends.</li>
-                                <li>Review and interpret error logs for debugging.</li>
-                                <li>Track file logs for audit trails and security monitoring.</li>
-                                <li>Evaluate activity logs to monitor user engagement.</li>
-                                <li>Provide actionable insights for site optimization.</li>
-                            </ul>
-                        </section>
-                    </section>
-                    <br>
                     <!-- end section -->
 
                     <section id="copyright-license" class="section">
