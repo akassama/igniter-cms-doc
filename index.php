@@ -253,6 +253,13 @@
                                     <li><a href="#ai-analysis">AI Data Analysis & Analytics</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#deployment-instructions">Deployment Instructions</a>
+                                <ul class="nav">
+                                    <li><a href="#ftp-deployment">FTP Deployment</a></li>
+                                    <li><a href="#cicd-deployment">CI/CD Pipeline</a></li>
+                                    <li><a href="#file-upload">File Upload</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#for-developers">For Developers</a>
                                 <ul class="nav">
                                     <li><a href="#endpoints">API Endpoints</a></li>
@@ -1296,6 +1303,168 @@
                                 <li>Evaluate activity logs to monitor user engagement.</li>
                                 <li>Provide actionable insights for site optimization.</li>
                             </ul>
+                        </section>
+                    </section>
+
+                    <section id="deployment-instructions">
+                        <h2>Deployment Instructions</h2>
+                        <p>This section outlines various methods to deploy your Igniter CMS application to a live server. Regardless of the deployment method chosen, you will always need to create and restore your database on the server.</p>
+
+                        <h3>Prerequisites for all Deployment Methods:</h3>
+                        <ul>
+                            <li>Access to your hosting control panel (e.g., <code>cPanel</code>).</li>
+                            <li>Your Igniter CMS project files.</li>
+                        </ul>
+
+                        <section id="ftp-deployment">
+                            <h3>FTP Deployment</h3>
+                            <p>Deploying via FTP involves manually transferring files and setting up your database.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/file-manager.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/file-manager.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ol>
+                                <li><strong>Database Setup:</strong>
+                                    <ol type="a">
+                                        <li>Log in to your hosting control panel (e.g., <code>cPanel</code>).</li>
+                                        <li>Create a new database and a new database user.</li>
+                                        <li>Grant the newly created user all necessary permissions on the database.</li>
+                                        <li>Export your local Igniter CMS database from <code>phpMyAdmin</code> (or your preferred database management tool).</li>
+                                        <li>Access <code>phpMyAdmin</code> in your hosting control panel and import the exported database file into the newly created database.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>FTP Connection:</strong>
+                                    <ol type="a">
+                                        <li>If you don't already have one, create an FTP user in your hosting control panel.</li>
+                                        <li>Connect to your server using an FTP client (e.g., <code>FileZilla</code>) with your FTP credentials.</li>
+                                        <li>Navigate to the desired directory on your server where your website files will reside (e.g., <code>public_html</code> or a subdirectory).</li>
+                                    </ol>
+                                </li>
+                                <li><strong>File Transfer:</strong>
+                                    <ol type="a">
+                                        <li>Upload all Igniter CMS project files from your local machine to the chosen server directory.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Configuration Updates:</strong>
+                                    <ol type="a">
+                                        <li>Open the <code>.env</code> file in your uploaded project root on the server and update the database connection details (database name, username, password).</li>
+                                        <li>Open <code>app/Config/Database.php</code> on the server and ensure the database connection settings are correct.</li>
+                                        <li>Open <code>app/Config/App.php</code> on the server and set the <code>baseURL</code> to your domain (e.g., <code>https://your-domain.com/</code>).</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section id="cicd-deployment">
+                            <h3>CI/CD Pipeline (GitHub Actions)</h3>
+                            <p>This method leverages a Continuous Integration/Continuous Deployment pipeline using GitHub Actions for automated deployment.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/github-actions.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/github-actions.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ol>
+                                <li><strong>Workflow File Preparation:</strong>
+                                    <ol type="a">
+                                        <li>Navigate to the <code>.github/workflows/</code> directory in your local Igniter CMS project.</li>
+                                        <li>Rename <code>main.yaml.txt</code> to <code>main.yaml</code>.</li>
+                                        <li>Open the <code>main.yaml</code> file.</li>
+                                        <li>Uncomment the YAML configuration by removing the <code>#</code> symbol from the beginning of relevant lines.</li>
+                                        <li>Update the <code>server</code> key with your FTP server address (e.g., <code>server: ftp.your-domain.com</code>).</li>
+                                        <li>Update the <code>server-dir</code> key with the path to your website's directory on the server (e.g., <code>server-dir: /your-site-path</code>).</li>
+                                    </ol>
+                                </li>
+                                <li><strong>GitHub Repository Setup:</strong>
+                                    <ol type="a">
+                                        <li>Create a new Git repository on GitHub.</li>
+                                        <li>Add two repository secrets: <code>FTPUSERNAME</code> and <code>FTPPASSWORD</code>, using your FTP account details.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Local Configuration Updates:</strong>
+                                    <ol type="a">
+                                        <li>Update your local <code>.env</code> file with the production database connection details.</li>
+                                        <li>Update <code>app/Config/Database.php</code> with the production database connection settings.</li>
+                                        <li>Set the <code>baseURL</code> in your local <code>app/Config/App.php</code> to your domain.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Vendor Folder Handling:</strong>
+                                    <ol type="a">
+                                        <li>Zip your local <code>vendor</code> folder (e.g., <code>vendor.zip</code>).</li>
+                                        <li>Manually upload <code>vendor.zip</code> to your server's deployment directory (e.g., using FTP or File Manager).</li>
+                                        <li>Extract the <code>vendor.zip</code> file in the server's deployment directory. The <code>vendor</code> folder is typically not pushed to Git due to its size and dynamic nature.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Server <code>.env</code> File:</strong>
+                                    <ol type="a">
+                                        <li>Create an <code>.env</code> file directly on your server in the root of your deployed application directory. This file will not be pushed by Git. Configure it with your production environment variables, especially database credentials.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Push to GitHub:</strong>
+                                    <ol type="a">
+                                        <li>Commit all your local changes (including the renamed <code>main.yaml</code> and updated configurations).</li>
+                                        <li>Push your committed changes to your GitHub repository. The CI/CD pipeline will automatically trigger and deploy your application.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Database Setup:</strong> (Same as step 1.a-d in FTP Deployment)
+                                    <ol type="a">
+                                        <li>Log in to your hosting control panel (e.g., <code>cPanel</code>).</li>
+                                        <li>Create a new database and a new database user.</li>
+                                        <li>Grant the newly created user all necessary permissions on the database.</li>
+                                        <li>Export your local Igniter CMS database from <code>phpMyAdmin</code> (or your preferred database management tool).</li>
+                                        <li>Access <code>phpMyAdmin</code> in your hosting control panel and import the exported database file into the newly created database.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section id="file-upload">
+                            <h3>File Upload (cPanel File Manager)</h3>
+                            <p>This method utilizes your hosting provider's file manager to upload your entire project as a compressed archive.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/cpanel-file-manager.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/cpanel-file-manager.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                            <ol>
+                                <li><strong>Local Configuration Updates:</strong>
+                                    <ol type="a">
+                                        <li>Update your local <code>.env</code> file with the production database connection details.</li>
+                                        <li>Update <code>app/Config/Database.php</code> with the production database connection settings.</li>
+                                        <li>Set the <code>baseURL</code> in your local <code>app/Config/App.php</code> to your domain.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Compress Project:</strong>
+                                    <ol type="a">
+                                        <li>Zip your entire Igniter CMS project folder on your local machine. Ensure the zip file contains all necessary files and folders.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Database Setup:</strong> (Same as step 1.a-d in FTP Deployment)
+                                    <ol type="a">
+                                        <li>Log in to your hosting control panel (e.g., <code>cPanel</code>).</li>
+                                        <li>Create a new database and a new database user.</li>
+                                        <li>Grant the newly created user all necessary permissions on the database.</li>
+                                        <li>Export your local Igniter CMS database from <code>phpMyAdmin</code> (or your preferred database management tool).</li>
+                                        <li>Access <code>phpMyAdmin</code> in your hosting control panel and import the exported database file into the newly created database.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Upload and Extract:</strong>
+                                    <ol type="a">
+                                        <li>Log in to your hosting control panel (e.g., <code>cPanel</code>).</li>
+                                        <li>Open the "File Manager".</li>
+                                        <li>Navigate to the directory where you want to deploy your website (e.g., <code>public_html</code> or a specific subdirectory).</li>
+                                        <li>Click on the "Upload" button and select your zipped Igniter CMS project file.</li>
+                                        <li>Once the upload is complete, select the uploaded zip file in the File Manager.</li>
+                                        <li>Click on the "Extract" button and choose the target directory for extraction (usually the current directory).</li>
+                                    </ol>
+                                </li>
+                            </ol>
                         </section>
                     </section>
                     
