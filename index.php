@@ -1605,13 +1605,6 @@
                             </ul>
                             
                             <ul>
-                                <li><strong>Policies</strong></li>
-                                <li><code>/api/{api-key}/get-policy/{policy_id}</code>: Obtains a specific policy document.</li>
-                                <li><code>/api/{api-key}/get-policies</code>: Returns all published policy documents.</li>
-                                <li><code>/api/{api-key}/get-policies?take=10&skip=0</code>: Retrieves filtered policy documents with pagination.</li>
-                            </ul>
-                            
-                            <ul>
                                 <li><strong>Portfolio</strong></li>
                                 <li><code>/api/{api-key}/get-portfolio/{portfolio_id}</code>: Fetches detailed information about a specific portfolio item.</li>
                                 <li><code>/api/{api-key}/get-portfolios</code>: Gets all published portfolio items.</li>
