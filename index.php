@@ -153,21 +153,25 @@
                     <div class="col-md-12">
                         <div class="big-title text-center">
                             <h1>Igniter CMS Documentation</h1>
-                            <p class="lead">Comprehensive Documentation - Version 1.0</p>
+                            <p class="lead">Comprehensive Documentation - Version 2.0</p>
                         </div>
                         <!-- end title -->
                     </div>
                     <!-- end 12 -->
+                    <div class="col-md-3">
+                        <label for="version" class="form-label">Select version:</label>
+                            <select class="form-control" id="version" name="version" onfocus="this.selectedIndex = 0" onchange='location = this.options[this.selectedIndex].value;'>
+                            <option value='https://docs.ignitercms.com/version-1.0.php'>1.0</option>
+                            <option value='https://docs.ignitercms.com/' selected>2.0</option>
+                        </select>
+                    </div>
                 </div>
                 <!-- end row -->
-
                 <hr>
-
             </section>
             <!-- end section -->
 
             <div class="row">
-
                 <div class="col-md-3">
                     <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
                         <ul class="nav">
@@ -186,40 +190,17 @@
                                     <li><a href="#categories">Categories</a></li>
                                     <li><a href="#navigations">Navigations</a></li>
                                     <li><a href="#pages">Pages</a></li>
-                                    <li><a href="#homepage">Home Page</a></li>
-                                    <li><a href="#contentblocks">Content Blocks</a></li>
-                                    <li><a href="#events">Events</a></li>
-                                    <li><a href="#gallery">Gallery</a></li>
-                                    <li><a href="#portfolios">Portfolios</a></li>
-                                    <li><a href="#services">Services</a></li>
-                                    <li><a href="#partners">Partners</a></li>
-                                    <li><a href="#counters">Counters</a></li>
-                                    <li><a href="#socials">Socials</a></li>
-                                    <li><a href="#pricings">Pricings</a></li>
-                                    <li><a href="#teams">Teams</a></li>
-                                    <li><a href="#testimonials">Testimonials</a></li>
-                                    <li><a href="#faqs">FAQs</a></li>
-                                    <li><a href="#appointments">Appointments</a></li>
-                                    <li><a href="#donation-causes">Donations</a></li>
-                                    <li><a href="#popups">Popups</a></li>
                                     <li><a href="#data-groups">Data Groups</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#ecommerce">Ecommerce </a>
-                                <ul class="nav">
-                                    <li><a href="#products">Products</a></li>
-                                    <li><a href="#product-categories">Products Categories</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#resumes">Resumes </a>
-                                <ul class="nav">
-                                    <li><a href="#manage-resumes">Manage Resumes</a></li>
-                                    <li><a href="#manage-experiences">Manage Experiences</a></li>
-                                    <li><a href="#manage-education">Manage Education</a></li>
-                                    <li><a href="#manage-skills">Manage Skills</a></li>
-                                </ul>
-                            </li>
                             <li><a href="#file-manager">File Manager</a></li>
+                            <li><a href="#content-blocks">Content Blocks</a></li>
+                            <li><a href="#appearance">Appearance</a>
+                                <ul class="nav">
+                                    <li><a href="#manage-themes">Themes</a></li>
+                                    <li><a href="#theme-editor">Theme Editor</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#settings">Settings</a>
                                 <ul class="nav">
                                     <li><a href="#update-details">Update Details</a></li>
@@ -229,10 +210,8 @@
                             <li><a href="#admin">Admin Management</a>
                                 <ul class="nav">
                                     <li><a href="#manage-users">Manage Users</a></li>
-                                    <li><a href="#translations">Translations</a></li>
                                     <li><a href="#configurations">Configurations</a></li>
                                     <li><a href="#codes">Codes</a></li>
-                                    <li><a href="#themes">Themes</a></li>
                                     <li><a href="#api-keys">API Keys</a></li>
                                     <li><a href="#activity-logs">Activity Logs</a></li>
                                     <li><a href="#logs">Logs</a></li>
@@ -240,13 +219,15 @@
                                     <li><a href="#blocked-ips">Blocked IP's</a></li>
                                     <li><a href="#whitelisted-ips">Whitelisted IP's</a></li>
                                     <li><a href="#backups">Backups</a></li>
-                                    <li><a href="#file-editor">File Editor</a></li>
-                                    <li><a href="#contact-messages">Contact Messages</a></li>
-                                    <li><a href="#bookings">Bookings</a></li>
-                                    <li><a href="#subscribers">Subscribers</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#ai-assistance">AI Assistance<small>(pro)</small> </a>
+                            <li><a href="#plugins">Plugins</a>
+                                <ul class="nav">
+                                    <li><a href="#manage-plugin">Manage Plugins</a></li>
+                                    <li><a href="#plugin-configurations">Plugin Configurations</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#ai-assistance">AI Assistance</a>
                                 <ul class="nav">
                                     <li><a href="#ask-ai">Ask AI</a></li>
                                     <li><a href="#ai-text-generation">AI Text Generation</a></li>
@@ -286,10 +267,11 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Item Name : </strong>Igniter CMS Starter Application</li>
-                                                <li><strong>Item Version : </strong> v 1.0</li>
+                                                <li><strong>Item Version : </strong> v 1.2</li>
                                                 <li><strong>Author  : </strong> <a href="https://github.com/akassama" target="_blank">A. Kassama</a></li>
                                                 <li><strong>Support Email : </strong> <a href="#" >kassamadeveloper(at)gmail.com</a></li>
                                                 <li><strong>License : </strong> <a href="https://mit-license.org/" target="_blank">MIT License</a></li>
+                                                <li><a href="https://github.com/akassama/igniter-cms/archive/refs/heads/main.zip" download>Download</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -344,8 +326,8 @@
                         <p>The dashboard is the landing page of the backend and includes the following features:</p>
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/01-dashboard.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/01-dashboard.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/01-dashboard.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/01-dashboard.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -369,8 +351,8 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/02-cms.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/02-cms.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/02-cms.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/02-cms.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -378,8 +360,8 @@
                             <h3>Blogs</h3>
                             <p>Create, update, and remove blogs. Features include:</p>
                             <div class="col-12">
-                                <a href="images/upload/03-cms-blogs.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/03-cms-blogs.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/03-cms-blogs.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/03-cms-blogs.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                             <ul>
@@ -396,8 +378,8 @@
                             <p>Manage blog categories. Features include:</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/05-cms-categories.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/05-cms-categories.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/05-cms-categories.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/05-cms-categories.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -412,8 +394,8 @@
                             
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/07-cms-navigations.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/07-cms-navigations.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/07-cms-navigations.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/07-cms-navigations.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -430,8 +412,8 @@
                             
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/09-cms-pages.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/09-cms-pages.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/09-cms-pages.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/09-cms-pages.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -442,269 +424,6 @@
                                 <li>Status toggles (e.g., Published or Draft).</li>
                             </ul>
                         </section>
-                        
-                        <section id="homepage">
-                            <h3>Home Page</h3>
-                            <p>Manage the content displayed on the home page. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/11-cms-home-page.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/11-cms-home-page.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Edit content for predefined sections such as HomeHero, Services, Testimonials, etc.</li>
-                                <li>Set the order of sections on the home page.</li>
-                                <li>Status toggles (e.g., Published or Draft).</li>
-                                <li>Add custom sections as needed.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="content-blocks">
-                            <h3>Content Blocks</h3>
-                            <p>Create reusable content blocks for other parts of the website.</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/13-cms-content-block.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/13-cms-content-block.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <section id="events">
-                            <h3>Events</h3>
-                            <p>Create, update, and remove events. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/15-cms-events.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/15-cms-events.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Form for event details, including title and content.</li>
-                                <li>Slug generation from the title.</li>
-                                <li>Image selection via input icon (copy file path under the "Actions" tab).</li>
-                                <li>SEO data customization.</li>
-                                <li>Status toggles (e.g., Published or Draft).</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="portfolios">
-                            <h3>Portfolios</h3>
-                            <p>Manage site portfolios. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/17-cms-portfolios.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/17-cms-portfolios.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Form for portfolio details, including title and content.</li>
-                                <li>Slug generation from the title.</li>
-                                <li>Image selection and additional detail images.</li>
-                                <li>SEO data customization.</li>
-                                <li>Status toggles (e.g., Published or Draft).</li>
-                            </ul>
-                        </section>
-
-                        <section id="gallery">
-                            <h3>Gallery</h3>
-                            <p>Manage site galleries with categorized images. Features include:</p>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/cms-gallery.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-gallery.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Form for gallery details, including title, group, image, and caption.</li>
-                                <li>You can use these images for gallery display in the theme.</li>
-                                <li>Status toggles (e.g., Published or Draft).</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="services">
-                            <h3>Services</h3>
-                            <p>Manage site services. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/19-cms-services.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/19-cms-services.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove services.</li>
-                                <li>Order services for display.</li>
-                                <li>Add icons, images, and links.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="partners">
-                            <h3>Partners</h3>
-                            <p>Manage site partners. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/21-cms-partners.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/21-cms-partners.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove partners.</li>
-                                <li>Add partner logos and links.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="counters">
-                            <h3>Counters</h3>
-                            <p>Manage counters displayed on the site. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/23-cms-counters.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/23-cms-counters.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove counters.</li>
-                                <li>Set initial and final values.</li>
-                                <li>Add links to counters.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="socials">
-                            <h3>Socials</h3>
-                            <p>Manage social media links. Features include:</p>
-                            
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/25-cms-socials.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/25-cms-socials.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove social links.</li>
-                                <li>Set the display order.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="pricings">
-                            <h3>Pricings</h3>
-                            <p>Manage pricing plans. Features include:</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/27-cms-pricings.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/27-cms-pricings.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove pricing plans.</li>
-                                <li>Add included and excluded features (comma-separated).</li>
-                                <li>Set order and mark as "Popular."</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="teams">
-                            <h3>Teams</h3>
-                            <p>Manage team information. Features include:</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/29-cms-teams.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/29-cms-teams.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove team members.</li>
-                                <li>Add names, titles, images, summaries, and social links.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="testimonials">
-                            <h3>Testimonials</h3>
-                            <p>Manage testimonials. Features include:</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/31-cms-testimonials.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/31-cms-testimonials.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove testimonials.</li>
-                                <li>Add names, titles, images, and organizational details.</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="faqs">
-                            <h3>FAQs</h3>
-                            <p>Manage frequently asked questions. Features include:</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/33-cms-faqs.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/33-cms-faqs.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove FAQs.</li>
-                                <li>Provide questions, answers, and display order.</li>
-                            </ul>
-                        </section>
-
-                        <section id="appointments">
-                            <h3>Appointments</h3>
-                            <p>Manage customer appointments with scheduling and tracking options. Features include:</p>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/cms-appointments.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-appointments.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Calendar integration with calendly.</li>
-                                <li>Appointment scheduling form with time slots with calendly.</li>
-                                <li>Automated email confirmations.</li>
-                                <li>Status updates (e.g., Confirmed, Pending, Completed).</li>
-                            </ul>
-                        </section>
-                        
-                        <section id="donation-causes">
-                            <h3>Donations</h3>
-                            <p>Manage donation causes. Features include:</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/35-cms-donations.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/35-cms-donations.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Create, update, and remove donation causes.</li>
-                                <li>Form for donation details, including title and content.</li>
-                                <li>Slug generation from the title.</li>
-                                <li>Image selection and embedded page code support.</li>
-                                <li>Status toggles (e.g., Published or Draft).</li>
-                            </ul>
-                        </section>
 
                         <section id="data-groups">
                             <h3>Data Groups</h3>
@@ -712,8 +431,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/cms-data-groups.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-data-groups.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/cms-data-groups.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/cms-data-groups.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -724,113 +443,6 @@
                                 <li>Fetching filters (e.g., for different themes).</li>
                             </ul>
                         </section>
-                        
-                        <section id="popups">
-                            <h3>Popup Adverts</h3>
-                            <p>Manage popup advertisements. Features include:</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/37-cms-popups.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/37-cms-popups.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Set popup types, titles, and text.</li>
-                                <li>Configure images, links, and sizes.</li>
-                            </ul>
-                        </section>
-                    </section>
-
-                    <section id="ecommerce">
-                        <h2>Ecommerce</h2>
-                        <p>This is the module for the simple ecommerce service.</p>
-                        <div class="row">
-                            <div class="col-12">
-                                <a href="images/upload/41-ecommerce.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/41-ecommerce.png" alt="" class="img-responsive img-thumbnail">
-                                </a>
-                            </div>
-                        </div>
-                        <section id="products">
-                            <h3>Products</h3>
-                            <p>Create, update, and remove products within this section.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/42-ecommerce-products.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/42-ecommerce-products.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="product-categories">
-                            <h3>Product Categories</h3>
-                            <p>Create, update, and remove product categories within this section.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/44-ecommerce-product-categories.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/44-ecommerce-product-categories.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                    </section>
-                    
-
-                    <section id="resumes">
-                        <h2>Resumes</h2>
-                        <p>This is the module for managing the resumes data</p>
-                        <div class="row">
-                            <div class="col-12">
-                                <a href="images/upload/46-resumes.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/46-resumes.png" alt="" class="img-responsive img-thumbnail">
-                                </a>
-                            </div>
-                        </div>
-                        <section id="manage-resumes">
-                            <h3>Resumes</h3>
-                            <p>Add resumes with fields like Name, Title, Image, Website, and more.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/47-resumes-educations.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/47-resumes-educations.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="manage-experiences">
-                            <h3>Experiences</h3>
-                            <p>Add professional experiences with role and description.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/47-resumes-experiences.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/47-resumes-experiences.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="manage-education">
-                            <h3>Education</h3>
-                            <p>Add educational qualifications.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/47-resumes-manage.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/47-resumes-manage.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="manage-skills">
-                            <h3>Skills</h3>
-                            <p>Add and categorize skills.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/47-resumes-skills.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/47-resumes-skills.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
                     </section>
 
                     <section id="file-manager" class="section">
@@ -840,8 +452,8 @@
                                 <p>Upload, manage, and organize files (images, videos, audios, documents, etc.) for use within the application.</p>
                                 <div class="row">
                                     <div class="col-12">
-                                        <a href="images/upload/48-files.png" data-rel="prettyPhoto">
-                                            <img src="images/upload/48-files.png" alt="" class="img-responsive img-thumbnail">
+                                        <a href="images/upload/version-2.0/48-files.png" data-rel="prettyPhoto">
+                                            <img src="images/upload/version-2.0/48-files.png" alt="" class="img-responsive img-thumbnail">
                                         </a>
                                     </div>
                                 </div>
@@ -854,13 +466,55 @@
                         </div>
                     </section>
 
+                    <section id="content-blocks" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h3>Content Blocks</h3>
+                                <p>Create reusable content blocks for other parts of the website.</p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="images/upload/version-2.0/13-cms-content-block.png" data-rel="prettyPhoto">
+                                            <img src="images/upload/version-2.0/13-cms-content-block.png" alt="" class="img-responsive img-thumbnail">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="appearance">
+                        <h2>Appearance</h2>
+                        <section id="manage-themes">
+                            <h3>Themes</h3>
+                            <p>Manage application themes here. Add, Active or remove themes.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="theme-editor">
+                            <h3>Theme Editor</h3>
+                            <p>Edit theme files here. Uses code editor to edit file contents.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+
                     <section id="settings">
                         <h2>Settings</h2>
                         <p>This is the module for managing your account details and changing passwords</p>
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/50-settings.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/50-settings.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/50-settings.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/50-settings.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -869,8 +523,8 @@
                             <p>Update your account information (name, bio, etc.).</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/51-settings-account-details.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/51-settings-account-details.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/51-settings-account-details.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/51-settings-account-details.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -880,8 +534,8 @@
                             <p>Change your account password.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/52-settings-change-password.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/52-settings-change-password.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/52-settings-change-password.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/52-settings-change-password.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -893,8 +547,8 @@
                         <p>The Admin module provides features for managing users, system configurations, and website functionality.</p>
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/53-admin.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/53-admin.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/53-admin.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/53-admin.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -904,8 +558,8 @@
                             <p>Create, edit, and manage user accounts and their permissions.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/54-admin-users.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/54-admin-users.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/54-admin-users.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/54-admin-users.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -934,46 +588,8 @@
 														<li>- Categories</li>
 														<li>- Navigations</li>
 														<li>- Pages</li>
-														<li>- Home Page</li>
 														<li>- Content Blocks</li>
-														<li>- Events</li>
-														<li>- Portfolios</li>
-                                                        <li>- Gallery</li>
-														<li>- Services</li>
-														<li>- Partners</li>
-														<li>- Counters</li>
-														<li>- Socials</li>
-														<li>- Pricings</li>
-														<li>- Teams</li>
-														<li>- Testimonials</li>
-														<li>- FAQs</li>
 														<li>- DataGroups</li>
-                                                        <li>- DataGroups</li>
-														<li>- Popups</li>
-													</ul>
-												</td>
-												<td><i class="ri-check-line text-success"></i></td>
-												<td><i class="ri-check-line text-success"></i></td>
-											</tr>
-											<tr>
-												<td>
-													E-Commerce
-													<ul class="list-unstyled ms-3 small">
-														<li>- Products</li>
-														<li>- Categories</li>
-													</ul>
-												</td>
-												<td><i class="ri-check-line text-success"></i></td>
-												<td><i class="ri-check-line text-success"></i></td>
-											</tr>
-											<tr>
-												<td>
-													Resumes
-													<ul class="list-unstyled ms-3 small">
-														<li>- Manage Resumes</li>
-														<li>- Manage Experiences</li>
-														<li>- Manage Education</li>
-														<li>- Manage Skills</li>
 													</ul>
 												</td>
 												<td><i class="ri-check-line text-success"></i></td>
@@ -1000,10 +616,8 @@
 													Admin
 													<ul class="list-unstyled ms-3 small">
 														<li>- Users</li>
-														<li>- Translations</li>
 														<li>- Configurations</li>
 														<li>- Codes</li>
-														<li>- Themes</li>
 														<li>- API Keys</li>
 														<li>- Activity Logs</li>
 														<li>- Logs</li>
@@ -1011,12 +625,18 @@
 														<li>- Blocked IP's</li>
 														<li>- Whitelisted IP's</li>
 														<li>- Backups</li>
-														<li>- File Editor</li>
-														<li>- Contact Messages</li>
-                                                        <li>- Bookings</li>
-														<li>- Subscribers</li>
 													</ul>
 												</td>
+												<td><i class="ri-check-line text-success"></i></td>
+												<td><i class="ri-close-line text-danger"></i></td>
+											</tr>
+											<tr>
+												<td>Manage Themes</td>
+												<td><i class="ri-check-line text-success"></i></td>
+												<td><i class="ri-check-line text-success"></i></td>
+											</tr>
+											<tr>
+												<td>Plugins</td>
 												<td><i class="ri-check-line text-success"></i></td>
 												<td><i class="ri-close-line text-danger"></i></td>
 											</tr>
@@ -1036,25 +656,13 @@
 							</div>
                         </section>
                     
-                        <section id="translations">
-                            <h3>Translations</h3>
-                            <p>Manage and translate application text into different languages.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/56-admin-translations.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/56-admin-translations.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                    
                         <section id="configurations">
                             <h3>Configurations</h3>
                             <p>Adjust application settings and configurations to suit your needs.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/58-admin-configurations.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/58-admin-configurations.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/58-admin-configurations.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/58-admin-configurations.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1065,8 +673,8 @@
                             <p>Edit header and footer JavaScript as well as custom CSS.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/60-admin-codes.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/60-admin-codes.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/60-admin-codes.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/60-admin-codes.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1077,8 +685,8 @@
                             <p>Manage and switch between different website themes.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/62-admin-themes.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/62-admin-themes.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/62-admin-themes.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/62-admin-themes.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1089,8 +697,8 @@
                             <p>Generate and manage API keys for accessing CMS data via the API.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/64-admin-apis.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/64-admin-apis.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/64-admin-apis.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/64-admin-apis.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1101,8 +709,8 @@
                             <p>View a history of user actions and system events for tracking changes.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/68-admin-activity-logs.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/68-admin-activity-logs.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/68-admin-activity-logs.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/68-admin-activity-logs.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1114,8 +722,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/cms-logs.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-logs.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/cms-logs.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/cms-logs.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1131,8 +739,8 @@
                             <p>Analyze website traffic statistics and view detailed analytics.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/68-admin-visit-stats.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/68-admin-visit-stats.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/68-admin-visit-stats.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/68-admin-visit-stats.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1144,8 +752,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/cms-blocked-ips.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-blocked-ips.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/cms-blocked-ips.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/cms-blocked-ips.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1162,8 +770,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/cms-whitelisted-ips.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-whitelisted-ips.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/cms-whitelisted-ips.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/cms-whitelisted-ips.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1178,8 +786,8 @@
                             <p>Create and manage backups for the database and website files.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/69-admin-backups.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/69-admin-backups.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/69-admin-backups.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/69-admin-backups.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1190,55 +798,39 @@
                             <p>Edit theme files directly within the admin panel (use this feature with caution).</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/70-admin-theme-files.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/70-admin-theme-files.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-                    
-                        <section id="contact-messages">
-                            <h3>Contact Messages</h3>
-                            <p>View and manage messages received from the website's contact form.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/72-admin-contact-messages.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/72-admin-contact-messages.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section id="bookings">
-                            <h3>Bookings</h3>
-                            <p>Manage reservations for various services. Features include:</p>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/cms-bookings.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cms-bookings.png" alt="" class="img-responsive img-thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Booking request form.</li>
-                                <li>Status tracking (e.g., Pending, Confirmed, Canceled).</li>
-                            </ul>
-                        </section>
-                    
-                        <section id="subscribers">
-                            <h3>Subscribers</h3>
-                            <p>Manage email subscribers and send newsletters to keep your audience engaged.</p>
-                            <div class="row">
-                                <div class="col-12">
-                                    <a href="images/upload/73-admin-subscribers.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/73-admin-subscribers.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/70-admin-theme-files.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/70-admin-theme-files.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
                         </section>
                     </section>
 
+                    <section id="plugins">
+                        <h2>Plugins</h2>
+                        <section id="manage-plugin">
+                            <h3>Installed Plugins</h3>
+                            <p>Manage installed plugins.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="plugin-configurations">
+                            <h3>Plugin Configs</h3>
+                            <p>Manage plugin's configuration data.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
 
                     <!-- end section -->
                     <section id="ai-assistance">
@@ -1251,8 +843,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/ask-ai.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/ask-ai.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/ask-ai.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/ask-ai.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1271,8 +863,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/ai-text-generation.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/ai-text-generation.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/ai-text-generation.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/ai-text-generation.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1291,8 +883,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/ai-analysis.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/ai-analysis.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/ai-analysis.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/ai-analysis.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1321,8 +913,8 @@
                             <p>Deploying via FTP involves manually transferring files and setting up your database.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/file-manager.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/file-manager.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/file-manager.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/file-manager.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1363,8 +955,8 @@
                             <p>This method leverages a Continuous Integration/Continuous Deployment pipeline using GitHub Actions for automated deployment.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/github-actions.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/github-actions.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/github-actions.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/github-actions.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1427,8 +1019,8 @@
                             <p>This method utilizes your hosting provider's file manager to upload your entire project as a compressed archive.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/cpanel-file-manager.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/cpanel-file-manager.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/cpanel-file-manager.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/cpanel-file-manager.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -1473,10 +1065,6 @@
                         <section id="endpoints">
                             <h3>Endpoints</h3>
                             <p>The app includes fetch-only APIs for retrieving CMS data.</p>
-                            <ul>
-                                <li><strong>Home Page</strong></li>
-                                <li><code>/api/{api-key}/get-home-page</code>: Retrieves the main homepage content and layout configuration.</li>
-                            </ul>
 
                             <ul>
                                 <li><strong>Generic Model Data</strong></li>
@@ -1487,24 +1075,10 @@
                             </ul>
 
                             <ul>
-                                <li><strong>Appointments</strong></li>
-                                <li><code>/api/{api-key}/get-all-appointments</code>: Returns a complete list of all scheduled appointments.</li>
-                                <li><code>/api/{api-key}/get-appointment/{appointment_id}</code>: Fetches details for a specific appointment, including time, status, and user details.</li>
-                                <li><code>/api/{api-key}/get-appointments?take=10&skip=0</code>: Retrieves paginated appointments with customizable limit and offset parameters.</li>
-                            </ul>
-
-                            <ul>
                                 <li><strong>Blogs</strong></li>
                                 <li><code>/api/{api-key}/get-all-blogs</code>: Returns a complete list of all published blog posts.</li>
                                 <li><code>/api/{api-key}/get-blog/{blog_id}</code>: Fetches a specific blog post with detailed content, metadata, and related information.</li>
                                 <li><code>/api/{api-key}/get-blogs?take=10&skip=0</code>: Retrieves paginated blog posts with customizable limit and offset parameters.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Bookings</strong></li>
-                                <li><code>/api/{api-key}/get-all-bookings</code>: Returns a complete list of all bookings.</li>
-                                <li><code>/api/{api-key}/get-booking/{booking_id}</code>: Fetches details for a specific booking, including associated user and status.</li>
-                                <li><code>/api/{api-key}/get-bookings?take=10&skip=0</code>: Retrieves paginated bookings with limit and offset options.</li>
                             </ul>
 
                             <ul>
@@ -1527,61 +1101,12 @@
                                 <li><code>/api/{api-key}/get-content-blocks</code>: Returns all available content blocks.</li>
                                 <li><code>/api/{api-key}/get-content-blocks?take=10&skip=0</code>: Retrieves filtered content blocks with pagination.</li>
                             </ul>
-                            
-                            <ul>
-                                <li><strong>Countries</strong></li>
-                                <li><code>/api/{api-key}/get-country/{country_id}</code>: Fetches detailed information about a specific country.</li>
-                                <li><code>/api/{api-key}/get-countries</code>: Gets all available country data.</li>
-                                <li><code>/api/{api-key}/get-countries?take=10&skip=0</code>: Returns a paginated list of countries.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Counters</strong></li>
-                                <li><code>/api/{api-key}/get-counter/{counter_id}</code>: Obtains specific counter or statistics information.</li>
-                                <li><code>/api/{api-key}/get-counters</code>: Returns all available counters and statistics.</li>
-                                <li><code>/api/{api-key}/get-counters?take=10&skip=0</code>: Retrieves filtered counters with pagination.</li>
-                            </ul>
 
                             <ul>
                                 <li><strong>Data Groups</strong></li>
                                 <li><code>/api/{api-key}/get-all-data-groups</code>: Returns a complete list of all data groups.</li>
                                 <li><code>/api/{api-key}/get-data-group/{group_id}</code>: Fetches details for a specific data group, including metadata and associated entries.</li>
                                 <li><code>/api/{api-key}/get-data-groups?take=10&skip=0</code>: Retrieves paginated data groups with filtering options.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Donation Causes</strong></li>
-                                <li><code>/api/{api-key}/get-donation-cause/{donation_cause_id}</code>: Fetches detailed information about a specific donation cause.</li>
-                                <li><code>/api/{api-key}/get-donation-causes</code>: Gets all active donation causes.</li>
-                                <li><code>/api/{api-key}/get-donation-causes?take=10&skip=0</code>: Returns a filtered list of donation causes with pagination.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Events</strong></li>
-                                <li><code>/api/{api-key}/get-event/{event_id}</code>: Fetches detailed information about a specific event.</li>
-                                <li><code>/api/{api-key}/get-events</code>: Gets all published events.</li>
-                                <li><code>/api/{api-key}/get-events?take=10&skip=0</code>: Retrieves a paginated list of events.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>FAQs</strong></li>
-                                <li><code>/api/{api-key}/get-faq/{faq_id}</code>: Retrieves a specific frequently asked question and its answer.</li>
-                                <li><code>/api/{api-key}/get-faqs</code>: Gets all published FAQs.</li>
-                                <li><code>/api/{api-key}/get-faqs?take=10&skip=0</code>: Returns a filtered list of FAQs with pagination.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Gallery</strong></li>
-                                <li><code>/api/{api-key}/get-all-gallery-images</code>: Returns a complete list of all gallery images.</li>
-                                <li><code>/api/{api-key}/get-gallery-image/{image_id}</code>: Fetches details for a specific image, including metadata and category.</li>
-                                <li><code>/api/{api-key}/get-gallery-images?take=10&skip=0</code>: Retrieves paginated gallery images with customizable limit and offset parameters.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Languages</strong></li>
-                                <li><code>/api/{api-key}/get-language/{language_id}</code>: Fetches information about a specific language.</li>
-                                <li><code>/api/{api-key}/get-languages</code>: Retrieves all available languages.</li>
-                                <li><code>/api/{api-key}/get-languages?take=10&skip=0</code>: Gets a paginated list of languages.</li>
                             </ul>
                             
                             <ul>
@@ -1598,48 +1123,6 @@
                             </ul>
                             
                             <ul>
-                                <li><strong>Partners</strong></li>
-                                <li><code>/api/{api-key}/get-partner/{partner_id}</code>: Fetches details about a specific partner or affiliate.</li>
-                                <li><code>/api/{api-key}/get-partners</code>: Retrieves all partner information.</li>
-                                <li><code>/api/{api-key}/get-partners?take=10&skip=0</code>: Gets a paginated list of partners.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Portfolio</strong></li>
-                                <li><code>/api/{api-key}/get-portfolio/{portfolio_id}</code>: Fetches detailed information about a specific portfolio item.</li>
-                                <li><code>/api/{api-key}/get-portfolios</code>: Gets all published portfolio items.</li>
-                                <li><code>/api/{api-key}/get-portfolios?take=10&skip=0</code>: Returns a paginated list of portfolio items.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Pricing</strong></li>
-                                <li><code>/api/{api-key}/get-pricing/{pricing_id}</code>: Fetches details about a specific pricing plan.</li>
-                                <li><code>/api/{api-key}/get-pricings</code>: Gets all available pricing plans.</li>
-                                <li><code>/api/{api-key}/get-pricings?take=10&skip=0</code>: Returns a paginated list of pricing plans.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Product Categories</strong></li>
-                                <li><code>/api/{api-key}/get-product-category/{product_category_id}</code>: Fetches a specific product category.</li>
-                                <li><code>/api/{api-key}/get-product-categories</code>: Retrieves all product categories.</li>
-                                <li><code>/api/{api-key}/get-product-categories?take=10&skip=0</code>: Returns a paginated list of product categories.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Products</strong></li>
-                                <li><code>/api/{api-key}/get-product/{product_id}</code>: Obtains detailed information about a specific product.</li>
-                                <li><code>/api/{api-key}/get-products</code>: Returns all available products.</li>
-                                <li><code>/api/{api-key}/get-products?take=10&skip=0</code>: Gets a filtered list of products with pagination.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Resumes</strong></li>
-                                <li><code>/api/{api-key}/get-resume/{resume_id}</code>: Fetches detailed information about a specific resume.</li>
-                                <li><code>/api/{api-key}/get-resumes</code>: Gets all published resumes.</li>
-                                <li><code>/api/{api-key}/get-resumes?take=10&skip=0</code>: Retrieves a filtered list of resumes with pagination.</li>
-                            </ul>
-                            
-                            <ul>
                                 <li><strong>Search</strong></li>
                                 <li><code>/api/{api-key}/search-results?key=the</code>: Performs a global search across all content types.</li>
                                 <li><code>/api/{api-key}/model-search-results?type=blog&key=the</code>: Searches within a specific content type.</li>
@@ -1647,45 +1130,10 @@
                             </ul>
                             
                             <ul>
-                                <li><strong>Services</strong></li>
-                                <li><code>/api/{api-key}/get-service/{service_id}</code>: Retrieves information about a specific service offering.</li>
-                                <li><code>/api/{api-key}/get-services</code>: Gets all available services.</li>
-                                <li><code>/api/{api-key}/get-services?take=10&skip=0</code>: Returns a filtered list of services with pagination.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Social Media</strong></li>
-                                <li><code>/api/{api-key}/get-social/{social_id}</code>: Retrieves information about a specific social media link.</li>
-                                <li><code>/api/{api-key}/get-socials</code>: Gets all social media links.</li>
-                                <li><code>/api/{api-key}/get-socials?take=10&skip=0</code>: Returns a filtered list of social media links with pagination.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Team</strong></li>
-                                <li><code>/api/{api-key}/get-team/{team_id}</code>: Fetches detailed information about a specific team member.</li>
-                                <li><code>/api/{api-key}/get-teams</code>: Gets all team member profiles.</li>
-                                <li><code>/api/{api-key}/get-teams?take=10&skip=0</code>: Retrieves a paginated list of team members.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Testimonials</strong></li>
-                                <li><code>/api/{api-key}/get-testimonial/{testimonial_id}</code>: Obtains a specific customer testimonial.</li>
-                                <li><code>/api/{api-key}/get-testimonials</code>: Returns all published testimonials.</li>
-                                <li><code>/api/{api-key}/get-testimonials?take=10&skip=0</code>: Gets a filtered list of testimonials with pagination.</li>
-                            </ul>
-                            
-                            <ul>
                                 <li><strong>Themes</strong></li>
                                 <li><code>/api/{api-key}/get-theme/{theme_id}</code>: Fetches information about a specific theme configuration.</li>
                                 <li><code>/api/{api-key}/get-themes</code>: Gets all available themes.</li>
                                 <li><code>/api/{api-key}/get-themes?take=10&skip=0</code>: Returns a paginated list of themes.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Translations</strong></li>
-                                <li><code>/api/{api-key}/get-translation/{translation_id}</code>: Retrieves a specific translation entry.</li>
-                                <li><code>/api/{api-key}/get-translations</code>: Gets all translation entries.</li>
-                                <li><code>/api/{api-key}/get-translations?take=10&skip=0</code>: Returns filtered translation entries with pagination.</li>
                             </ul>
 
                         </section>
@@ -1700,24 +1148,12 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>announcementPopups</td>
-                                        <td>App\Models\AnnouncementPopupsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>appointmentsModel</td>
-                                        <td>App\Models\AppointmentsModel</td>
-                                    </tr>
-                                    <tr>
                                         <td>blockedIPsModel</td>
                                         <td>App\Models\BlockedIPsModel</td>
                                     </tr>
                                     <tr>
                                         <td>blogs</td>
                                         <td>App\Models\BlogsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>bookingsModel</td>
-                                        <td>App\Models\BookingsModel</td>
                                     </tr>
                                     <tr>
                                         <td>categories</td>
@@ -1732,40 +1168,8 @@
                                         <td>App\Models\ContentBlocksModel</td>
                                     </tr>
                                     <tr>
-                                        <td>countries</td>
-                                        <td>App\Models\CountriesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>counters</td>
-                                        <td>App\Models\CountersModel</td>
-                                    </tr>
-                                    <tr>
                                         <td>dataGroupsModel</td>
                                         <td>App\Models\DataGroupsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>donationCauses</td>
-                                        <td>App\Models\DonationCausesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>events</td>
-                                        <td>App\Models\EventsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>faqs</td>
-                                        <td>App\Models\FrequentlyAskedQuestionsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>galleryModel</td>
-                                        <td>App\Models\GalleryModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>homePage</td>
-                                        <td>App\Models\HomePageModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>languages</td>
-                                        <td>App\Models\LanguagesModel</td>
                                     </tr>
                                     <tr>
                                         <td>navigations</td>
@@ -1776,56 +1180,8 @@
                                         <td>App\Models\PagesModel</td>
                                     </tr>
                                     <tr>
-                                        <td>partners</td>
-                                        <td>App\Models\PartnersModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>policies</td>
-                                        <td>App\Models\PoliciesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>portfolios</td>
-                                        <td>App\Models\PortfoliosModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>pricings</td>
-                                        <td>App\Models\PricingsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>products</td>
-                                        <td>App\Models\ProductsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>productCategories</td>
-                                        <td>App\Models\ProductCategoriesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>resumes</td>
-                                        <td>App\Models\ResumesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>services</td>
-                                        <td>App\Models\ServicesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>socials</td>
-                                        <td>App\Models\SocialsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>teams</td>
-                                        <td>App\Models\TeamsModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>testimonials</td>
-                                        <td>App\Models\TestimonialsModel</td>
-                                    </tr>
-                                    <tr>
                                         <td>themes</td>
                                         <td>App\Models\ThemesModel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>translations</td>
-                                        <td>App\Models\TranslationsModel</td>
                                     </tr>
                                     <tr>
                                         <td>whitelistedIPsModel</td>
@@ -1844,55 +1200,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td style="padding: 8px;">HomePageModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                home_page_id(VARCHAR), section(VARCHAR), section_title(VARCHAR), section_description(VARCHAR), 
-                                                section_image(VARCHAR), section_image_2(VARCHAR), section_image_3(VARCHAR), section_image_4(VARCHAR), 
-                                                section_video(VARCHAR), section_audio(VARCHAR), section_file(VARCHAR), content_blocks(TEXT), 
-                                                section_link(VARCHAR), new_tab(BOOLEAN), status(INT), order(INT), deletable(VARCHAR), 
-                                                created_by(DATETIME), updated_by(DATETIME), created_at(DATETIME), updated_at(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">AppointmentsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                appointment_id(VARCHAR), title(VARCHAR), description(VARCHAR), image(VARCHAR), slug(VARCHAR),
-                                                appointment_type(VARCHAR), embed_url(VARCHAR), embed_script(TEXT), widget_height(VARCHAR),
-                                                widget_min_width(VARCHAR), status(INT), total_views(INT), meta_title(VARCHAR),
-                                                meta_description(VARCHAR), meta_keywords(VARCHAR), created_by(VARCHAR), updated_by(VARCHAR)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">AnnouncementPopupsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                popup_id(VARCHAR), name(VARCHAR), type(VARCHAR), title(VARCHAR), text(TEXT), button_text(VARCHAR), 
-                                            button_color(VARCHAR), cancel_button_text(VARCHAR), cancel_button_color(VARCHAR), link(VARCHAR), 
-                                            new_tab(BOOLEAN), delay(VARCHAR), image(VARCHAR), preview_image(VARCHAR), background_color(VARCHAR), 
-                                            text_color(VARCHAR), backdrop_opacity(VARCHAR), width(VARCHAR), height(VARCHAR), position(VARCHAR), 
-                                            animation(VARCHAR), show_close_button(VARCHAR), enable_subscription(VARCHAR), 
-                                            subscription_placeholder(VARCHAR), subscription_success_message(VARCHAR), enable_countdown(VARCHAR), 
-                                            countdown_end_date(DATETIME), countdown_format(VARCHAR), countdown_expired_text(VARCHAR), 
-                                            order(INT), status(INT), frequency(VARCHAR), show_on_pages(TEXT), deletable(VARCHAR), 
-                                            created_by(DATETIME), updated_by(DATETIME), created_at(DATETIME), updated_at(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">BookingsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                booking_id(VARCHAR), name(VARCHAR), email(VARCHAR), phone(VARCHAR), booking_date(DATE),
-                                                booking_time(TIME), no_of_people(INT), message(VARCHAR), other(VARCHAR), ip_address(VARCHAR),
-                                                country(VARCHAR), device(VARCHAR), created_by(VARCHAR), updated_by(VARCHAR)
-                                            </code>
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <td style="padding: 8px;">BlogsModel</td>
                                         <td style="padding: 8px;">
@@ -1941,201 +1248,11 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 8px;">CountriesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                id(INT), iso(VARCHAR), name(VARCHAR), nicename(VARCHAR), iso3(VARCHAR), numcode(VARCHAR), phonecode(VARCHAR)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">CountersModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                counter_id(VARCHAR), title(VARCHAR), description(VARCHAR), icon(VARCHAR), initial_value(VARCHAR), 
-                                            final_value(VARCHAR), extra_text(VARCHAR), link(VARCHAR), new_tab(BOOLEAN), 
-                                            created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <td style="padding: 8px;">DataGroupsModel</td>
                                         <td style="padding: 8px;">
                                             <code>
                                                 data_group_id(VARCHAR), data_group_for(VARCHAR), data_group_list(VARCHAR),
                                                 deletable(VARCHAR), created_by(VARCHAR), updated_by(VARCHAR)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">DonationCausesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                donation_cause_id(VARCHAR), title(VARCHAR), description(VARCHAR), slug(VARCHAR), image(VARCHAR), content(TEXT), 
-                                          link_title(VARCHAR), link(VARCHAR), new_tab(BOOLEAN), embedded_page_title(VARCHAR), embedded_page(VARCHAR), 
-                                          status(INT), meta_title(VARCHAR), meta_description(TEXT), meta_keywords(TEXT)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">EventsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                event_id(VARCHAR), title(VARCHAR), description(VARCHAR), slug(VARCHAR), image(VARCHAR), content(TEXT), 
-                                          location(VARCHAR), start_date(VARCHAR), start_time(VARCHAR), end_date(VARCHAR), end_time(VARCHAR), 
-                                          registration_link_label(VARCHAR), registration_link(VARCHAR), new_tab(BOOLEAN), status(INT), 
-                                          meta_title(VARCHAR), meta_description(TEXT), meta_keywords(TEXT), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">FrequentlyAskedQuestionsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                faq_id(VARCHAR), question(VARCHAR), answer(VARCHAR), order(INT), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                          <td style="padding: 8px;">GalleryModel</td>
-                                          <td style="padding: 8px;">
-                                            <code>
-                                                gallery_id(VARCHAR), title(VARCHAR), caption(VARCHAR), category_filter(VARCHAR),
-                                                group(VARCHAR), image(VARCHAR), status(INT), created_by(VARCHAR), updated_by(VARCHAR)
-                                            </code>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">LanguagesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                language_id(VARCHAR), value(VARCHAR)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">NavigationsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                navigation_id(VARCHAR), title(VARCHAR), description(VARCHAR), group(VARCHAR), order(INT), parent(VARCHAR), 
-                                          link(VARCHAR), new_tab(BOOLEAN), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">PagesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                page_id(VARCHAR), title(VARCHAR), slug(VARCHAR), content(TEXT), status(INT), created_by(DATETIME), 
-                                          updated_by(DATETIME), meta_title(VARCHAR), meta_keywords(TEXT), meta_description(TEXT), created_at(DATETIME), 
-                                          updated_at(DATETIME)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">PartnersModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                partner_id(VARCHAR), title(VARCHAR), logo(VARCHAR), link(VARCHAR), new_tab(BOOLEAN), created_by(DATETIME), 
-                                          updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">PoliciesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                policy_id(VARCHAR), policy_for(VARCHAR), title(VARCHAR), content(TEXT), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">PortfoliosModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                portfolio_id(VARCHAR), title(VARCHAR), description(VARCHAR), slug(VARCHAR), category(VARCHAR), 
-                                          category_filter(VARCHAR), client(VARCHAR), project_date(VARCHAR), project_url(VARCHAR), featured_image(VARCHAR), 
-                                          details_image_1(VARCHAR), details_image_2(VARCHAR), details_image_3(VARCHAR), details_image_4(VARCHAR), 
-                                          content(TEXT), status(INT), created_by(DATETIME), updated_by(DATETIME), meta_title(VARCHAR), 
-                                          meta_description(TEXT), meta_keywords(TEXT)
-                                            </code>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 8px;">PricingsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                pricing_id(VARCHAR), title(VARCHAR), description(TEXT), currency(VARCHAR), amount(VARCHAR), period(VARCHAR),
-                                            is_popular(BOOLEAN), included_features_list(TEXT), excluded_features_list(TEXT), link_title(VARCHAR), link(VARCHAR),
-                                            new_tab(BOOLEAN), order(INT), other_label(VARCHAR), created_by(DATETIME), updated_by(DATETIME), created_at(DATETIME), updated_at(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">ProductsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                product_id(VARCHAR), title(VARCHAR), description(TEXT), short_description(TEXT), slug(VARCHAR), category(VARCHAR),
-                                            sub_category(VARCHAR), brand(VARCHAR), model(VARCHAR), price(VARCHAR), sale_price(VARCHAR), currency(VARCHAR),
-                                            price_note(VARCHAR), featured_image(VARCHAR), product_image_1(VARCHAR), product_image_2(VARCHAR), product_image_3(VARCHAR),
-                                            product_image_4(VARCHAR), product_video(VARCHAR), is_featured(BOOLEAN), specifications(TEXT), attributes(TEXT),
-                                            seller_info(TEXT), purchase_options(TEXT), tags(TEXT), status(INT), order(INT), created_by(DATETIME), updated_by(DATETIME),
-                                            meta_title(TEXT), meta_description(TEXT), meta_keywords(TEXT)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">ProductCategoriesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                category_id(VARCHAR), title(VARCHAR), description(TEXT), group(VARCHAR), parent(VARCHAR), link(VARCHAR), new_tab(BOOLEAN),
-                                            order(INT), status(INT), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">ResumesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                resume_id(VARCHAR), full_name(VARCHAR), title(VARCHAR), summary(TEXT), email(VARCHAR), phone(VARCHAR), address(VARCHAR),
-                                            website(VARCHAR), linkedin_url(VARCHAR), github_url(VARCHAR), twitter_url(VARCHAR), image(VARCHAR), cv_file(VARCHAR),
-                                            status(INT), created_by(DATETIME), updated_by(DATETIME), meta_title(TEXT), meta_description(TEXT), meta_keywords(TEXT)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">ServicesModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                service_id(VARCHAR), title(VARCHAR), description(TEXT), image(VARCHAR), icon(VARCHAR), link(VARCHAR), new_tab(BOOLEAN),
-                                            order(INT), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">SocialsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                social_id(VARCHAR), name(VARCHAR), icon(VARCHAR), link(VARCHAR), new_tab(BOOLEAN), order(INT), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">TeamsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                team_id(VARCHAR), name(VARCHAR), title(VARCHAR), image(VARCHAR), summary(TEXT), social_link_1(VARCHAR), social_link_2(VARCHAR),
-                                            social_link_3(VARCHAR), social_link_4(VARCHAR), social_link_5(VARCHAR), social_link_6(VARCHAR), details_link(VARCHAR),
-                                            new_tab(BOOLEAN), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">TestimonialsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                testimonial_id(VARCHAR), name(VARCHAR), title(VARCHAR), company(VARCHAR), image(VARCHAR), testimonial(TEXT), rating(VARCHAR),
-                                            link(VARCHAR), new_tab(BOOLEAN), created_by(DATETIME), updated_by(DATETIME)
                                             </code>
                                         </td>
                                     </tr>
@@ -2146,14 +1263,6 @@
                                                 theme_id(VARCHAR), name(VARCHAR), path(VARCHAR), primary_color(VARCHAR), secondary_color(VARCHAR), other_color(VARCHAR),
                                             image(VARCHAR), theme_url(VARCHAR), footer_copyright(VARCHAR), category(VARCHAR), sub_category(VARCHAR), selected(BOOLEAN),
                                             deletable(BOOLEAN), home_page(VARCHAR), created_by(DATETIME), updated_by(DATETIME)
-                                            </code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">TranslationsModel</td>
-                                        <td style="padding: 8px;">
-                                            <code>
-                                                translation_id(VARCHAR), language(VARCHAR), created_by(DATETIME)
                                             </code>
                                         </td>
                                     </tr>
@@ -2358,7 +1467,6 @@
     <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
     <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
     <script src="js/syntax-highlighter/scripts/shBrushPhp.js"></script>
-
 </body>
 
 </html>
