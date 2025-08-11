@@ -351,8 +351,8 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/version-2.0/02-cms.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/version-2.0/02-cms.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/cms.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/cms.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -360,8 +360,8 @@
                             <h3>Blogs</h3>
                             <p>Create, update, and remove blogs. Features include:</p>
                             <div class="col-12">
-                                <a href="images/upload/version-2.0/cms.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/version-2.0/cms.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/blogs.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/blogs.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                             <ul>
@@ -394,8 +394,8 @@
                             
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/version-2.0/navigations.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/version-2.0/navigations.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/navigation.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/navigation.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -412,8 +412,8 @@
                             
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/version-2.0/09-cms-pages.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/version-2.0/09-cms-pages.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/pages.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/pages.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -513,8 +513,8 @@
                         <p>This is the module for managing your account details and changing passwords</p>
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/settings.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/settings.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -547,8 +547,8 @@
                         <p>The Admin module provides features for managing users, system configurations, and website functionality.</p>
                         <div class="row">
                             <div class="col-12">
-                                <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
-                                    <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                <a href="images/upload/version-2.0/admin.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/admin.png" alt="" class="img-responsive img-thumbnail">
                                 </a>
                             </div>
                         </div>
@@ -812,8 +812,8 @@
                             <p>Manage plugin's configuration data.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/plugin-configs.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/plugin-configs.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -851,8 +851,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/ai-text-generation.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/ai-text-generation.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
@@ -871,8 +871,8 @@
 
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="images/upload/version-2.0/TODO.png" data-rel="prettyPhoto">
-                                        <img src="images/upload/version-2.0/TODO.png" alt="" class="img-responsive img-thumbnail">
+                                    <a href="images/upload/version-2.0/ai-analysis.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/ai-analysis.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
                             </div>
