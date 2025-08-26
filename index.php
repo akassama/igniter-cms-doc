@@ -160,7 +160,7 @@
                     <!-- end 12 -->
                     <div class="col-md-3">
                         <label for="version" class="form-label">Select version:</label>
-                            <select class="form-control" id="version" name="version" onfocus="this.selectedIndex = 0" onchange='location = this.options[this.selectedIndex].value;'>
+                            <select class="form-control" id="version" name="version">
                             <option value='https://docs.ignitercms.com/version-1.0.php'>1.0</option>
                             <option value='https://docs.ignitercms.com/' selected>2.0</option>
                         </select>
@@ -1461,6 +1461,12 @@
     <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
     <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
     <script src="js/syntax-highlighter/scripts/shBrushPhp.js"></script>
+
+    <script>
+        $('#version').change(function(){
+            window.location.href = $(this).val();
+        })
+    </script>
 </body>
 
 </html>
