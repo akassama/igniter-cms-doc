@@ -299,7 +299,18 @@
                             <ol>
                                 <li>Clone or download the project from the repository (<a href="https://github.com/akassama/igniter-cms">GitHub</a>).</li>
                                 <li>Navigate to the project folder and run <code>composer install</code> to install dependencies.</li>
-                                <li>Set the database config in the <code>.env</code> file to configure environment and database settings.</li>
+                                <li>
+                                    Set the database config in the <code>.env</code> file to configure environment and database settings. <br/>
+                                    <code>
+                                        database.default.hostname = localhost<br/>
+                                        database.default.database = igniter_cms_db<br/>
+                                        database.default.username = root<br/>
+                                        database.default.password = db_password<br/>
+                                        database.default.DBDriver = MySQLi<br/>
+                                        database.default.DBPrefix =<br/>
+                                        database.default.port = 3306<br/>
+                                    </code>
+                                </li>
                                 <li>Set the base URL in <code>.env</code> file. <code>app.baseURL = 'http://localhost/igniter-cms/'</code></li>
 								<li>Make sure you create the database in your local server.</li>
                                 <li>Generate App Key: <code>php spark generate:key</code>. This command will generate/update the application key (APP_KEY) in .env file.</li>
