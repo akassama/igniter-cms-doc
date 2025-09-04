@@ -288,7 +288,7 @@
                             <h3>Requirements</h3>
                             <ul>
                                 <li>PHP (recommended version: 8.0 or higher)</li>
-                                <li>Enable `zip` and `gd` extension in php ini</li>
+                                <li>Enable `zip`, `gd`, and `intl` extension in php ini</li>
                                 <li>Composer installed.</li>
                                 <li>MySQL, Postgre, SQLite or another supported database</li>
                                 <li>Web server (Apache, Nginx, etc.)</li>
