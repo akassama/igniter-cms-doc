@@ -321,6 +321,34 @@
                                 Note: To reset database you can use these commands <code>php spark delete:tables</code> and <code>php spark migrate</code>
                             </p>
                         </section>
+                        <section id="installer-installation">
+                            <h3>Using the Installer</h3>
+                            <ol>
+                                <li>
+                                    Download the Igniter CMS Installer from
+                                    <a href="https://github.com/akassama/igniter-cms-installer/archive/refs/heads/main.zip" target="_blank">this zip file</a>.
+                                </li>
+                                <li>
+                                    Extract the contents into your local web server directory (e.g., <code>htdocs</code>, <code>www</code>, or <code>public_html</code>).
+                                </li>
+                                <li>
+                                    Open the installer in your browser (for example:
+                                    <code>http://localhost/igniter-cms-installer/</code>).
+                                </li>
+                                <li>
+                                    Follow the on-screen instructions to provide your database and application details.
+                                </li>
+                                <li>
+                                    Once installation is complete, the installer will configure your application, generate the
+                                    <code>.env</code> file, set up the database, install dependencies, and automatically remove the
+                                    <code>/install</code> folder for security.
+                                </li>
+                                <li>
+                                    You can now access your site at the base URL you configured during installation.
+                                </li>
+                            </ol>
+                        </section>
+
                         <section id="permissions">
                             <h3>Permissions</h3>
                             <p>Ensure <code>writable</code> and <code>public/uploads</code> directories are writable by the web server.</p>
