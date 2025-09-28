@@ -1084,6 +1084,10 @@
                     
                     <section id="for-developers">
                         <h2>For Developers</h2>
+						<section id="front-end-format">
+							<h3>Frontend Format</h3>
+                            <p>You can set the CMS as a headless CMS or use the Views to render data. To set the format for frontend, got the `Configurations` and search `FrontEndFormat`. Set it to either `MVC` or `API` </p>
+						</section>
                         <section id="endpoints">
                             <h3>Endpoints</h3>
                             <p>The app includes fetch-only APIs for retrieving CMS data.</p>
