@@ -1086,7 +1086,7 @@
                         <h2>For Developers</h2>
 						<section id="front-end-format">
 							<h3>Frontend Format (Headless/MVC)</h3>
-                            <p>You can set the CMS as a headless CMS or use the Views to render data. To set the format for frontend, got the <code>Configurations<\code> and search <code>FrontEndFormat<\code>. Set it to either <code>MVC<\code> or <code>API<\code> </p>
+                            <p>You can set the CMS as a headless CMS or use the Views to render data. To set the format for frontend, got the <code>Configurations</code> and search <code>FrontEndFormat</code>. Set it to either <code>MVC</code> or <code>API</code> </p>
 						</section>
                         <section id="endpoints">
                             <h3>Endpoints</h3>
