@@ -325,24 +325,28 @@
                             <h3>Using the Installer</h3>
                             <ol>
                                 <li>
-                                    Download the Igniter CMS Installer from
-                                    <a href="https://github.com/akassama/igniter-cms-installer/archive/refs/heads/main.zip" target="_blank">this zip file</a>.
+                                    Download the Igniter CMS (zip) from
+                                    <a href="https://github.com/akassama/igniter-cms/archive/refs/heads/main.zip" target="_blank">this zip file</a>.
                                 </li>
                                 <li>
                                     Extract the contents into your local web server directory (e.g., <code>htdocs</code>, <code>www</code>, or <code>public_html</code>).
                                 </li>
                                 <li>
-                                    Open the installer in your browser (for example:
-                                    <code>http://localhost/igniter-cms-installer/</code>).
+                                    Alternatively, clone to repo into your local web server directory.
+                                </li>
+                                <li>
+                                    Open the installer in your browser (for example: <code>http://localhost/igniter-cms-installer/</code>).
                                 </li>
                                 <li>
                                     Follow the on-screen instructions to provide your database and application details.
                                 </li>
                                 <li>
                                     Once installation is complete, the installer will configure your application, generate the
-                                    <code>.env</code> file, set up the database, install dependencies, and automatically remove the
-                                    <code>/install</code> folder for security.
+                                    <code>.env</code> file, set up the database, install dependencies
                                 </li>
+								<li>
+                                    The <code>/install</code> folder should be deleted after installation. Note it would be automatically removed in "production" environment for security.
+								</li>
                                 <li>
                                     You can now access your site at the base URL you configured during installation.
                                 </li>
