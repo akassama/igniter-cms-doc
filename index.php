@@ -193,6 +193,14 @@
                                     <li><a href="#data-groups">Data Groups</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#forms-manager">Forms Manager</a>
+                                <ul class="nav">
+                                    <li><a href="#contacts-management">Contact</a></li>
+                                    <li><a href="#comments-management">Comments</a></li>
+                                    <li><a href="#bookings-management">Bookings</a></li>
+                                    <li><a href="#subscriptions-management">Subscriptions</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#file-manager">File Manager</a></li>
                             <li><a href="#content-blocks">Content Blocks</a></li>
                             <li><a href="#appearance">Appearance</a>
@@ -249,6 +257,8 @@
                                     <li><a href="#app-messages">App Messages</a></li>
                                     <li><a href="#activity-types-message">Activity Types Message</a></li>
                                     <li><a href="#theme-files">Theme Files</a></li>
+                                    <li><a href="#theme-development">Develop Themes</a></li>
+                                    <li><a href="#plugin-development">Develop Plugins</a></li>
                                 </ul>
                             </li>
                             <li><a href="#copyright-license">Copyright and license</a></li>
@@ -480,6 +490,66 @@
                                 <li>Export options for analytics.</li>
                                 <li>Fetching filters (e.g., for different themes).</li>
                             </ul>
+                        </section>
+                    </section>
+
+                    <section id="forms-manager" class="section">
+                        <h2>Form Management</h2>
+                        <p>The Form Manager provides a robust toolset for creating, managing, and tracking various types of user-submitted forms directly from the admin panel.</p>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="images/upload/version-2.0/forms-manager.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/forms-manager.png" alt="" class="img-responsive img-thumbnail">
+                                </a>
+                            </div>
+                        </div>
+                        <section id="contacts-management">
+                            <h3>Contact Messages</h3>
+                            <p>Use to manage contact form submissions</p>
+                            <div class="col-12">
+                                <a href="images/upload/version-2.0/manage-contacts.png" data-rel="prettyPhoto">
+                                    <img src="images/upload/version-2.0/manage-contacts.png" alt="" class="img-responsive img-thumbnail">
+                                </a>
+                            </div>
+                        </section>
+                        
+                        <section id="comments-management">
+                            <h3>Blog Comments</h3>
+                            <p>Use to manage comment form submissions</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/manage-comments.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/manage-comments.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section id="bookings-management">
+                            <h3>Bookings</h3>
+                            <p>Use to manage booking form submissions</p>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/manage-bookings.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/manage-bookings.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section id="subscriptions-management">
+                            <h3>Subscriptions</h3>
+                            <p>Use to manage subscription form submissions</p>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="images/upload/version-2.0/manage-subscriptions.png" data-rel="prettyPhoto">
+                                        <img src="images/upload/version-2.0/manage-subscriptions.png" alt="" class="img-responsive img-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
                         </section>
                     </section>
 
@@ -1104,68 +1174,6 @@
                                 <li><code>/api/{api-key}/get-model-data?model=blogs&where_clause={"blog_id":"{blog-id}","status":1}</code>: Generic - Fetch multiple filtered blogs (e.g., blog_id = {blog-id} and status = 1).</li>
                             </ul>
 
-                            <ul>
-                                <li><strong>Blogs</strong></li>
-                                <li><code>/api/{api-key}/get-all-blogs</code>: Returns a complete list of all published blog posts.</li>
-                                <li><code>/api/{api-key}/get-blog/{blog_id}</code>: Fetches a specific blog post with detailed content, metadata, and related information.</li>
-                                <li><code>/api/{api-key}/get-blogs?take=10&skip=0</code>: Retrieves paginated blog posts with customizable limit and offset parameters.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Categories</strong></li>
-                                <li><code>/api/{api-key}/get-category/{category_id}</code>: Retrieves detailed information about a specific content category.</li>
-                                <li><code>/api/{api-key}/get-categories</code>: Gets all available content categories.</li>
-                                <li><code>/api/{api-key}/get-categories?take=10&skip=0</code>: Returns a filtered list of categories with pagination.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Codes</strong></li>
-                                <li><code>/api/{api-key}/get-code/{code_id}</code>: Fetches a specific code snippet or block with its metadata.</li>
-                                <li><code>/api/{api-key}/get-codes</code>: Retrieves all available code snippets and blocks.</li>
-                                <li><code>/api/{api-key}/get-codes?take=10&skip=0</code>: Gets a paginated list of code blocks with filtering options.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Content Blocks</strong></li>
-                                <li><code>/api/{api-key}/get-content-block/{content_id}</code>: Obtains a specific reusable content block.</li>
-                                <li><code>/api/{api-key}/get-content-blocks</code>: Returns all available content blocks.</li>
-                                <li><code>/api/{api-key}/get-content-blocks?take=10&skip=0</code>: Retrieves filtered content blocks with pagination.</li>
-                            </ul>
-
-                            <ul>
-                                <li><strong>Data Groups</strong></li>
-                                <li><code>/api/{api-key}/get-all-data-groups</code>: Returns a complete list of all data groups.</li>
-                                <li><code>/api/{api-key}/get-data-group/{group_id}</code>: Fetches details for a specific data group, including metadata and associated entries.</li>
-                                <li><code>/api/{api-key}/get-data-groups?take=10&skip=0</code>: Retrieves paginated data groups with filtering options.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Navigation</strong></li>
-                                <li><code>/api/{api-key}/get-navigation/{navigation_id}</code>: Fetches a specific navigation menu structure and its items.</li>
-                                <li><code>/api/{api-key}/get-navigations?take=10&skip=0</code>: Returns a paginated list of navigation menus with their structures.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Pages</strong></li>
-                                <li><code>/api/{api-key}/get-all-pages</code>: Retrieves all published static pages in the system.</li>
-                                <li><code>/api/{api-key}/get-page/{page_id}</code>: Obtains a specific static page with its full content and attributes.</li>
-                                <li><code>/api/{api-key}/get-pages?take=10&skip=0</code>: Gets a paginated list of static pages with filtering options.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Search</strong></li>
-                                <li><code>/api/{api-key}/search-results?key=the</code>: Performs a global search across all content types.</li>
-                                <li><code>/api/{api-key}/model-search-results?type=blog&key=the</code>: Searches within a specific content type.</li>
-                                <li><code>/api/{api-key}/filter-search-results?type=author&key=admin</code>: Performs a filtered search with specific criteria.</li>
-                            </ul>
-                            
-                            <ul>
-                                <li><strong>Themes</strong></li>
-                                <li><code>/api/{api-key}/get-theme/{theme_id}</code>: Fetches information about a specific theme configuration.</li>
-                                <li><code>/api/{api-key}/get-themes</code>: Gets all available themes.</li>
-                                <li><code>/api/{api-key}/get-themes?take=10&skip=0</code>: Returns a paginated list of themes.</li>
-                            </ul>
-
                         </section>
                         <section id="model-names">
                             <h3>Model Names</h3>
@@ -1449,6 +1457,38 @@
                         <section id="theme-files">
                             <h3>Theme Files</h3>
                             <p>Customize the files by going to <code>app/Views/front-end/themes/{theme-folder}</code>.</p>
+                        </section>
+
+                        <section id="theme-development">
+                            <h3>Theme Development</h3>
+                            <p>You can download the theme template here to develop your own theme.</p>
+                            <p>Provide theme details in <code>theme.json</code> file.</p>
+                            <p>
+                                <a 
+                                    href="downloads/theme-template.zip" 
+                                    download="theme-template.zip" 
+                                    class="btn btn-primary btn-lg w-full rounded-lg btn-shadow"
+                                    role="button"
+                                >
+                                    Download theme-template.zip
+                                </a>
+                            </p>
+                        </section>
+
+                        <section id="plugin-development">
+                            <h3>Plugin Development</h3>
+                            <p>You can download the plugin template here to develop your own plugin.</p>
+                            <p>Provide plugin details in <code>plugin.json</code> file.</p>
+                            <p>
+                                <a 
+                                    href="downloads/plugin-template.zip" 
+                                    download="plugin-template.zip" 
+                                    class="btn btn-primary btn-lg w-full rounded-lg btn-shadow"
+                                    role="button"
+                                >
+                                    Download plugin-template.zip
+                                </a>
+                            </p>
                         </section>
                     </section>
                     <!-- end section -->
