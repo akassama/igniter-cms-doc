@@ -324,11 +324,11 @@
                                 <li>Set the base URL in <code>.env</code> file. <code>app.baseURL = 'http://localhost/igniter-cms/'</code></li>
 								<li>Make sure you create the database in your local server.</li>
                                 <li>Generate App Key: <code>php spark generate:key</code>. This command will generate/update the application key (APP_KEY) in .env file.</li>
-                                <li>Run database migrations with <code>php spark migrate</code>.</li>
+                                <li>Run database migrations with <code>php spark recreate:tables</code>.</li>
                                 <li>Open the base url in browser. E.g. <code>https://localhost/igniter-cms/</code>.</li>
                             </ol>
                             <p>
-                                Note: To reset database you can use these commands <code>php spark delete:tables</code> and <code>php spark migrate</code>
+                                Note: To reset database you can use these commands <code>php spark recreate:tables</code>
                             </p>
                         </section>
                         <section id="installer-installation">
