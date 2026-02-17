@@ -1545,37 +1545,84 @@
                             </div>
                         </section>
 
-                        <section id="theme-development">
-                            <h3>Theme Development</h3>
-                            <p>You can download the theme template here to develop your own theme.</p>
-                            <p>Provide theme details in <code>theme.json</code> file.</p>
-                            <p>
-                                <a 
-                                    href="downloads/theme-template.zip" 
-                                    download="theme-template.zip" 
-                                    class="btn btn-primary btn-lg w-full rounded-lg btn-shadow"
-                                    role="button"
-                                >
-                                    Download theme-template.zip
-                                </a>
-                            </p>
-                        </section>
+<section id="theme-development">
+    <h3>Theme Development</h3>
+    <p>Igniter CMS themes are modular and separated into logic (PHP), presentation (Views), and static assets. You can download the starter template below to begin building your own custom design.</p>
+    
+    <div class="mb-4">
+        <a href="downloads/theme-template.zip" download="theme-template.zip" class="btn btn-primary btn-lg w-100 rounded-lg btn-shadow" role="button">
+            <i class="fas fa-download mr-2"></i> Download Theme Template (.zip)
+        </a>
+    </div>
 
-                        <section id="plugin-development">
-                            <h3>Plugin Development</h3>
-                            <p>You can download the plugin template here to develop your own plugin.</p>
-                            <p>Provide plugin details in <code>plugin.json</code> file.</p>
-                            <p>
-                                <a 
-                                    href="downloads/plugin-template.zip" 
-                                    download="plugin-template.zip" 
-                                    class="btn btn-primary btn-lg w-full rounded-lg btn-shadow"
-                                    role="button"
-                                >
-                                    Download plugin-template.zip
-                                </a>
-                            </p>
-                        </section>
+    <h4>1. Directory Structure</h4>
+    <p>A theme directory consists of three primary components:</p>
+    <div class="bg-light p-3 border rounded mb-3">
+        <pre class="mb-0"><code>theme-name/
+├── assets/             # Static files (CSS, JS, Images)
+├── views/              # PHP template files
+└── theme.json          # Theme metadata (Name, Author, Version)</code></pre>
+    </div>
+
+    <h4>2. Views Breakdown</h4>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Folder/File</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><code>blogs/</code></td><td>Contains <code>index.php</code> (blog list) and <code>view-blog.php</code> (single post).</td></tr>
+            <tr><td><code>home/index.php</code></td><td>The main landing page template.</td></tr>
+            <tr><td><code>includes/_functions.php</code></td><td>Theme-specific logic and helper functions.</td></tr>
+            <tr><td><code>layout/_layout.php</code></td><td>The master wrapper (contains <code>&lt;head&gt;</code> and footer).</td></tr>
+            <tr><td><code>pages/view-page.php</code></td><td>Template for static CMS pages.</td></tr>
+            <tr><td><code>search/</code></td><td>Templates for <code>index.php</code> (results) and <code>filter.php</code>.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="alert alert-info">
+        <strong>Pro Tip:</strong> Always use the <code>theme.json</code> file to define your theme version. This helps the system manage updates and prevents cache issues.
+    </div>
+</section>
+
+<hr class="my-5">
+
+<section id="plugin-development">
+    <h3>Plugin Development</h3>
+    <p>Plugins allow you to extend the core functionality of Igniter CMS without modifying system files. Every plugin must be self-contained within its own folder.</p>
+
+    <div class="mb-4">
+        <a href="downloads/plugin-template.zip" download="plugin-template.zip" class="btn btn-success btn-lg w-100 rounded-lg btn-shadow" role="button">
+            <i class="fas fa-plug mr-2"></i> Download Plugin Template (.zip)
+        </a>
+    </div>
+
+    <h4>1. Core Plugin Files</h4>
+    <p>A standard plugin requires the following 6 files to function correctly:</p>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>plugin.json</strong>: Metadata (Hooks, Name, Unique ID).</li>
+                <li class="list-group-item"><strong>plugin.php</strong>: The main entry point and class definition.</li>
+                <li class="list-group-item"><strong>database.php</strong>: Handles table creation/migrations on install.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>processor.php</strong>: Logic for handling POST/AJAX requests.</li>
+                <li class="list-group-item"><strong>manage.php</strong>: The admin interface view for the plugin.</li>
+                <li class="list-group-item"><strong>instructions.php</strong>: Documentation displayed to the user.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="alert alert-warning">
+        <strong>Note:</strong> Ensure your <code>plugin.json</code> contains a unique <code>plugin_id</code> to avoid conflicts with existing system plugins.
+    </div>
+</section>
                     </section>
                     <!-- end section -->
 
