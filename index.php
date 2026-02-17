@@ -207,6 +207,7 @@
                                 <ul class="nav">
                                     <li><a href="#manage-themes">Themes</a></li>
                                     <li><a href="#theme-editor">Theme Editor</a></li>
+                                    <li><a href="#theme-revisions">Theme Revisions & Version Control</a></li>
                                 </ul>
                             </li>
                             <li><a href="#settings">Settings</a>
@@ -257,6 +258,8 @@
                                     <li><a href="#app-messages">App Messages</a></li>
                                     <li><a href="#activity-types-message">Activity Types Message</a></li>
                                     <li><a href="#theme-files">Theme Files</a></li>
+                                    <li><a href="#cron-jobs">CRON Jobs/Scheduler</a></li>
+                                    <li><a href="#ai-configuration">AI Configuration (Gemini)</a></li>
                                     <li><a href="#theme-development">Develop Themes</a></li>
                                     <li><a href="#plugin-development">Develop Plugins</a></li>
                                 </ul>
@@ -612,6 +615,28 @@
                                         <img src="images/upload/version-2.0/file-editor.png" alt="" class="img-responsive img-thumbnail">
                                     </a>
                                 </div>
+                            </div>
+                        </section><section id="theme-revisions">
+                            <h3>Theme Revisions & Version Control</h3>
+                            <p>The CMS includes a built-in versioning system for your theme files, allowing you to experiment with code changes safely and revert to previous versions if something goes wrong.</p>
+
+                            <h4>1. Creating a Revision</h4>
+                            <p>Revisions are created automatically whenever you save a file in the Theme Editor:</p>
+                            <ol>
+                                <li>Go to <strong>Appearance > Theme Editor</strong> (<code>/account/appearance/theme-editor</code>).</li>
+                                <li>Select the file you wish to edit (e.g., <code>_layout.php</code> or <code>site.css</code>).</li>
+                                <li>Make your changes and click the <strong>"Save File"</strong> button. The system will instantly archive the previous version of the code as a new revision.</li>
+                            </ol>
+
+                            <h4>2. Managing & Restoring Revisions</h4>
+                            <p>To view your history or restore an old version of your theme, navigate to <strong>Appearance > Revisions</strong> (<code>/account/appearance/theme-editor/revisions</code>).</p>
+                            <ul>
+                                <li><strong>View History:</strong> You will see a list of all saved versions, timestamped and organized by file name.</li>
+                                <li><strong>Copy & Restore:</strong> Click on a revision to view the code. You can copy the code from a previous version and paste it back into the active Theme Editor to restore your site's appearance.</li>
+                            </ul>
+
+                            <div class="alert alert-warning">
+                                <strong>Note:</strong> Revisions track changes to file content only. They do not track changes to uploaded images or database-driven settings.
                             </div>
                         </section>
                     </section>
@@ -1150,6 +1175,7 @@
                                         <li>Click on the "Upload" button and select your zipped Igniter CMS project file.</li>
                                         <li>Once the upload is complete, select the uploaded zip file in the File Manager.</li>
                                         <li>Click on the "Extract" button and choose the target directory for extraction (usually the current directory).</li>
+                                        <li>Make sure that the file permissions are set correctly. <code>0755</code> for directories and <code>0644</code> for files</li>
                                     </ol>
                                 </li>
                             </ol>
@@ -1457,6 +1483,66 @@
                         <section id="theme-files">
                             <h3>Theme Files</h3>
                             <p>Customize the files by going to <code>app/Views/front-end/themes/{theme-folder}</code>.</p>
+                        </section>
+
+                        <section id="cron-jobs">
+							<h3>CRON Jobs/Scheduler</h3>
+							<p>Igniter CMS includes a built-in CRON controller to automate background tasks. These tasks are managed in <code>app/Controllers/CronController.php</code>.</p>
+
+							<div class="alert alert-warning">
+								<strong>Important:</strong> This endpoint does not run automatically. You must use a service to call the URL at regular intervals to "activate" the queue.
+							</div>
+
+							<h4>1. Security Configuration</h4>
+							<p>Define a strong secret key in your <code>.env</code> file to prevent unauthorized access:</p>
+							<pre><code>CRON_SECRET_KEY = "your-strong-secret-key-here-12345"</code></pre>
+
+							<h4>2. Automation Methods</h4>
+							<p>Choose one of the following methods to trigger your CRON tasks every minute:</p>
+
+							<h5>Method A: Using an External Web Cron Service (Easiest)</h5>
+							<p>If you are on shared hosting or don't want to touch server logs, use a free service like <strong>cron-job.org</strong> or <strong>EasyCron</strong>.</p>
+							<ul>
+								<li><strong>URL to call:</strong> <code>https://yourdomain.com/cron/run?key=your-secret-key</code></li>
+								<li><strong>Execution interval:</strong> Every 1 minute (or as desired).</li>
+								<li><strong>Request Method:</strong> GET</li>
+							</ul>
+
+							<h5>Method B: Server-Side Crontab (Recommended for VPS)</h5>
+							<p>Add this line to your server's crontab file to trigger the script internally:</p>
+							<div class="bg-dark text-white p-2 rounded mb-3">
+								<code>* * * * * curl -s "https://yourdomain.com/cron/run?key=your-secret-key" > /dev/null 2>&1</code>
+							</div>
+
+							<h4>3. Verifying Execution</h4>
+							<p>When the CRON runs successfully, it returns a JSON response and logs the activity:</p>
+							<pre><code>{
+	"status": "success",
+	"message": "Cron job(s) executed successfully",
+	"timestamp": "2026-02-17 13:22:23"
+}</code></pre>
+						</section>
+
+                        <section id="ai-configuration">
+                            <h3>AI Configuration (Gemini)</h3>
+                            <p>Igniter CMS integrates with Google Gemini to provide advanced AI features, including blog generation assistance and automated data analysis for site logs and visits.</p>
+
+                            <h4>1. Environment Setup</h4>
+                            <p>To begin, you must add your Gemini API credentials to your <code>.env</code> file. You can obtain a key from the <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>.</p>
+                            <pre><code>GEMINI_REQUEST_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent"
+                        GEMINI_REQUEST_KEY = "your-gemini-key-here"</code></pre>
+
+                            <h4>2. System Settings</h4>
+                            <p>Once your credentials are set, you must enable the features within the Admin Dashboard:</p>
+                            <ul>
+                                <li>Navigate to: <strong>Settings > Configurations</strong> (or <code>/account/admin/configurations</code>).</li>
+                                <li><strong>Enable Gemini AI:</strong> Set this to <code>Yes</code> to activate the AI "Generate" buttons in the blog and content editors.</li>
+                                <li><strong>Enable Gemini AI Analysis:</strong> Set this to <code>Yes</code> if you want the system to use AI to analyze site traffic, error logs, and user behavior. Set to <code>No</code> to disable data processing while keeping text generation active.</li>
+                            </ul>
+                            
+                            <div class="alert alert-info">
+                                <strong>Tip:</strong> We use the <code>gemini-3-flash-preview</code> model by default for its high speed and low latency, making it ideal for real-time content generation.
+                            </div>
                         </section>
 
                         <section id="theme-development">
